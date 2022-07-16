@@ -29,3 +29,35 @@ nav {
     }
   }
 }
+
+.hero {
+  background: url("/images/bg1.jpg") center / cover;
+  height: 100vh;
+
+  &_div {
+    top: 4rem;
+    left: 4rem;
+    border-radius: 1.2rem;
+    box-shadow: 1.4rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.651);
+    max-width: 52vw;
+    height: 40vh;
+
+    &-heading {
+      font-size: 4rem;
+      color: white;
+      line-height: 6rem;
+      word-wrap: normal;
+    }
+  }
+  &_down {
+    margin: 32rem auto;
+    text-align: center;
+  }
+}
+
+.break {
+  background-color: cyan;
+  height: 15vh;
+}
