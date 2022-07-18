@@ -116,7 +116,41 @@ nav ul span {
 }
 
 .reviews {
-  background-color: cyan;
-  height: 80%;
+  background-color: turquoise;
+  height: 50%;
   width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews_container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow: hidden;
+  width: 70%;
+  height: 15rem;
+}
+
+.reviews_container-cards {
+  height: 12rem;
+  width: 24rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.projects {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(50, 172, 159);
 }/*# sourceMappingURL=styles.css.map */
