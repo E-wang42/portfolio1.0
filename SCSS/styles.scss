@@ -250,3 +250,18 @@ nav {
 .card-content {
   transform: translateZ(6rem) scale(0.96);
 }
+
+// CONTACT --------------------------
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40rem;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+// FOOTER ---------------------------

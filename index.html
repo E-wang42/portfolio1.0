@@ -137,9 +137,12 @@
       <!-- --- contact --- -->
 
       <form action="https://formspree.io/f/mvoleavg" method="post">
-        <input type="text" name="name" id="name" />
-        <input type="text" name="email" id="email" />
-        <input type="textarea" id="textarea" />
+        <label for="name">Name</label
+        ><input type="text" name="name" id="name" />
+        <label for="email">e-mail</label
+        ><input type="text" name="email" id="email" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
       </form>
 
       <!-- --- footer --- -->
@@ -162,7 +165,7 @@
             <span>resume</span>
           </div>
         </section>
-        <div>Copyright 2022 - Made with ♥ - uparrow</div>
+        <div>Copyright 2022 - Made with ♥ - <span>uparrow</span></div>
       </footer>
     </main>
   </body>

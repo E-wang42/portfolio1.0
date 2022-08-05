@@ -247,4 +247,15 @@ nav ul span {
 
 .card-content {
   transform: translateZ(6rem) scale(0.96);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 40rem;
+}
+
+label {
+  margin-top: 1rem;
 }/*# sourceMappingURL=styles.css.map */
