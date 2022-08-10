@@ -257,10 +257,14 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 40rem;
+  width: 30rem;
 }
 
 label {
+  margin-top: 1rem;
+}
+
+form button {
   margin-top: 1rem;
 }
 
