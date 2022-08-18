@@ -181,9 +181,51 @@
         </form>
       </section> -->
       <section class="form__section">
-        <form action="" class="form__form">
-          <input class="form__input" type="text" placeholder=" " />
-          <label class="form__label" for="name">Name</label>
+        <form
+          action="https://formspree.io/f/mvoleavg"
+          class="form__form"
+          method="post"
+        >
+          <div class="form__div">
+            <input
+              class="form__input"
+              autocomplete="off"
+              type="text"
+              name="name"
+              required
+              placeholder=" "
+            />
+            <label class="form__label" for="name">Name</label>
+          </div>
+          <div class="form__div">
+            <input
+              class="form__input"
+              autocomplete="off"
+              name="email"
+              type="text"
+              required
+              placeholder=" "
+            />
+            <label class="form__label" for="email">Email</label>
+          </div>
+          <div class="form__div">
+            <input class="form__input" type="text" placeholder=" " />
+            <label class="form__label" for="subject">Subject</label>
+          </div>
+          <div class="form__textarea">
+            <textarea
+              class="form__input"
+              placeholder=" "
+              required
+              name="message"
+              id="message"
+              cols="20"
+              rows="15"
+            ></textarea>
+            <a target="_blank" href=""></a>
+            <label class="form__label" for="message">Message</label>
+          </div>
+          <button class="form__button">Submit</button>
         </form>
       </section>
       <!-- --- footer --- -->

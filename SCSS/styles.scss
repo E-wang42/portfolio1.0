@@ -253,59 +253,6 @@ nav {
 
 // CONTACT --------------------------
 
-// .contact--section {
-//   background-color: #555;
-// }
-
-// form {
-//   display: flex;
-//   flex-direction: column;
-//   margin: 0 auto;
-//   width: 30rem;
-//   position: relative;
-// }
-
-// .contact__form--input {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   border: 2px solid whitesmoke;
-//   border-radius: 0.5rem;
-//   font-family: inherit;
-//   font-size: inherit;
-//   color: white;
-//   outline: none;
-//   padding: 1rem;
-//   background: transparent;
-// }
-
-// .input--fields {
-//   margin: 0.5rem;
-// }
-
-// .contact__form--label {
-//   position: absolute;
-//   left: 1.2rem;
-//   top: 0.65rem;
-//   padding: 0 0.5rem;
-//   color: white;
-//   cursor: text;
-//   transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
-//   background-color: #555;
-// }
-
-// .contact__form--input:focus ~ .contact__form--label,
-// .contact__form--input:not(:placeholder-shown).contact__form--input:not(:focus)
-//   ~ .contact__form--label {
-//   top: -0.5rem;
-//   font-size: 0.8rem;
-//   left: 0.8rem;
-// }
-
-// textarea {
-//   resize: vertical;
-// }
-
 .form__section {
   background-color: #2e343e;
   width: 100vw;
@@ -315,39 +262,93 @@ nav {
   align-items: center;
 }
 
-form {
-  width: 300px;
-  height: 50px;
-  position: relative;
+.form__form {
+  border: 2px solid white;
+  padding: 3rem;
+  border-radius: 0.5rem;
 }
 
-form > input {
+.form__div {
+  width: 25rem;
+  height: 50px;
+  position: relative;
+  margin-top: 1.2rem;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.form__textarea {
+  width: 25rem;
+  height: 15rem;
+  position: relative;
+  margin-top: 1.2rem;
+}
+
+#message {
+  padding-top: 1rem;
+  resize: vertical;
+}
+
+.form__input {
   width: 100%;
   height: 100%;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 0.5rem;
   outline: none;
-  text-indent: 1rem;
+  text-indent: 1.4rem;
   color: white;
+  font-size: 1.2rem;
+  padding: 1.5rem 0 1.5rem 0;
+  &:hover {
+    border: 2px solid #30d5c8;
+    transition: 0.4s ease-in-out;
+  }
+  &:focus {
+    border: 2px solid #30d5c8;
+  }
 }
 
-form label {
+.form__label {
   position: absolute;
-  top: 0.8rem;
-  left: 1.2rem;
+  top: 0.6rem;
+  left: 1.5rem;
   color: #95989a;
   text-transform: capitalize;
-  font-size: 25px;
+  font-size: 1.6rem;
   transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   pointer-events: none;
   background-color: #2e343e;
 }
 
 .form__input:focus ~ .form__label,
 .form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
-  top: -12px;
-  font-size: 20px;
+  top: -0.75rem;
+  font-size: 1.2rem;
+  left: 1rem;
 }
+
+.form__button {
+  margin-top: 1.2rem;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 0.5rem;
+  outline: none;
+  text-indent: 1.2rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  &:hover {
+    color: black;
+    background-color: #30d5c8;
+    transition: 0.2s ease-in-out;
+  }
+}
+
 // FOOTER ---------------------------
