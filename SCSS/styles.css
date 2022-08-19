@@ -357,4 +357,42 @@ nav ul span {
   color: black;
   background-color: #30d5c8;
   transition: 0.2s ease-in-out;
+}
+
+footer {
+  margin: 0 auto;
+  height: 40%;
+  background-color: limegreen;
+  display: grid;
+  align-items: center;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rem;
+}
+
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__ul li {
+  padding-bottom: 2rem;
+}
+.footer__ul li a {
+  text-decoration: none;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__contact span {
+  padding-bottom: 2rem;
 }/*# sourceMappingURL=styles.css.map */
