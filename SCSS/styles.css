@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  list-style: none;
 }
 
 html {
@@ -13,9 +12,11 @@ html {
 
 main {
   height: 100vh;
+  max-width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 5rem;
+  font-family: "Rubik", sans-serif;
   scroll-behavior: smooth;
 }
 main::-webkit-scrollbar {
@@ -116,7 +117,7 @@ nav ul span {
 }
 
 .reviews {
-  background-color: turquoise;
+  background-color: #30d5c8;
   height: 50%;
   width: 100vw;
   position: relative;
@@ -362,7 +363,7 @@ nav ul span {
 footer {
   margin: 0 auto;
   height: 40%;
-  background-color: limegreen;
+  background-color: #25272e;
   display: grid;
   align-items: center;
 }
@@ -379,12 +380,19 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 .footer__ul li {
   padding-bottom: 2rem;
 }
 .footer__ul li a {
   text-decoration: none;
+  color: white;
+}
+
+.footer__logo {
+  width: 15rem;
+  filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
 }
 
 .footer__contact {
@@ -395,4 +403,5 @@ footer {
 }
 .footer__contact span {
   padding-bottom: 2rem;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
