@@ -36,52 +36,80 @@ main::-webkit-scrollbar-track:hover {
 }
 
 nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.466);
+  background-color: #25272e;
+  padding: 0 9rem;
+  z-index: 1000;
+  box-shadow: 0 0.75rem 0.5rem rgba(0, 0, 0, 0.288);
 }
 nav img {
-  margin-left: 5rem;
+  width: 6.5rem;
+  filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
+}
+nav img:hover {
+  filter: drop-shadow(0 0 0.75rem #30d5c8);
 }
 nav ul {
-  margin-right: 5rem;
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
+  list-style: none;
 }
-nav ul span {
-  background-color: white;
+nav ul a {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.15rem;
+  font-size: 1.2rem;
+}
+nav ul a span {
+  background-color: #7530d5;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
 }
 
 .hero {
-  background: url("/images/bg1.jpg") center/cover;
+  background: url("/images/bg2.jpg") center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
 }
 .hero_div {
   top: 8rem;
-  left: 6rem;
+  left: -22rem;
   border-radius: 1.2rem;
-  box-shadow: 1.4rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   position: relative;
   background-color: rgba(0, 0, 0, 0.651);
-  max-width: 52vw;
+  width: 40rem;
   height: 40%;
 }
 .hero_div-heading {
-  font-size: 4rem;
+  font-size: 3rem;
+  font-family: "Montserrat", sans-serif;
   color: white;
-  line-height: 6rem;
-  letter-spacing: -0.15rem;
+  line-height: 5rem;
+  letter-spacing: 0.1rem;
+  padding: 2rem;
   word-wrap: normal;
 }
 .hero_down {
-  margin: 32rem auto;
   text-align: center;
+  padding-bottom: 1.5rem;
+}
+.hero_down a {
+  color: #25272e;
 }
 
 .break {
-  background-color: cyan;
+  background-color: #7530d5;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.863);
   height: 15%;
 }
@@ -349,7 +377,7 @@ nav ul span {
   outline: none;
   text-indent: 1.2rem;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
@@ -357,6 +385,7 @@ nav ul span {
 .form__button:hover {
   color: black;
   background-color: #30d5c8;
+  font-weight: bold;
   transition: 0.2s ease-in-out;
 }
 
@@ -391,8 +420,11 @@ footer {
 }
 
 .footer__logo {
-  width: 15rem;
+  width: 12rem;
   filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
+}
+.footer__logo:hover {
+  filter: drop-shadow(0 0 0.75rem #30d5c8);
 }
 
 .footer__contact {

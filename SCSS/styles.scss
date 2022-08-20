@@ -64,56 +64,83 @@ main {
 
 // Nav ----------------------
 nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.466);
-  & img {
-    margin-left: 5rem;
+  background-color: $grey;
+  padding: 0 9rem;
+  z-index: 1000;
+  box-shadow: 0 0.75rem 0.5rem rgba(0, 0, 0, 0.288);
+  img {
+    width: 6.5rem;
+    filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
+    &:hover {
+      filter: drop-shadow(0 0 0.75rem $blue);
+    }
   }
-  & ul {
-    margin-right: 5rem;
+  ul {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    & span {
-      background-color: white;
+    gap: 3rem;
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: white;
+      text-transform: capitalize;
+      letter-spacing: 0.15rem;
+      font-size: 1.2rem;
+      span {
+        background-color: $purple--dark;
+        padding: 0.3rem 0.6rem;
+        border-radius: 0.5rem;
+      }
     }
   }
 }
 
 // Hero ---------------------
 .hero {
-  background: url("/images/bg1.jpg") center / cover;
+  background: url("/images/bg2.jpg") center / cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
 
   &_div {
     top: 8rem;
-    left: 6rem;
+    left: -22rem;
     border-radius: 1.2rem;
-    box-shadow: 1.4rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+    box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
     position: relative;
     background-color: rgba(0, 0, 0, 0.651);
-    max-width: 52vw;
+    width: 40rem;
     height: 40%;
 
     &-heading {
-      font-size: 4rem;
+      font-size: 3rem;
+      font-family: $Montserrat;
       color: white;
-      line-height: 6rem;
-      letter-spacing: -0.15rem;
+      line-height: 5rem;
+      letter-spacing: 0.1rem;
+      padding: 2rem;
       word-wrap: normal;
     }
   }
   &_down {
-    margin: 32rem auto;
     text-align: center;
+    padding-bottom: 1.5rem;
+    a {
+      color: $grey;
+    }
   }
 }
 
 // Break --------------------------------
 .break {
-  background-color: cyan;
+  background-color: $purple--dark;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.863);
   height: 15%;
 }
@@ -353,7 +380,7 @@ nav {
   transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
   padding: 0 0.5rem;
   pointer-events: none;
-  background-color: #2e343e;
+  background-color: $background;
 }
 
 .form__input:focus ~ .form__label,
@@ -373,13 +400,14 @@ nav {
   outline: none;
   text-indent: 1.2rem;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 1rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
   &:hover {
     color: black;
     background-color: $blue;
+    font-weight: bold;
     transition: 0.2s ease-in-out;
   }
 }
@@ -413,8 +441,11 @@ footer {
 }
 
 .footer__logo {
-  width: 15rem;
+  width: 12rem;
   filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
+  &:hover {
+    filter: drop-shadow(0 0 0.75rem $blue);
+  }
 }
 
 .footer__contact {
