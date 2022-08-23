@@ -19,6 +19,14 @@ main {
   font-family: "Rubik", sans-serif;
   scroll-behavior: smooth;
 }
+main ::-moz-selection {
+  background-color: #30d5c8;
+  color: black;
+}
+main ::selection {
+  background-color: #30d5c8;
+  color: black;
+}
 main::-webkit-scrollbar {
   width: 0.8vw;
 }
@@ -108,23 +116,53 @@ nav ul a span {
   color: #25272e;
 }
 
-.break {
+.break__section {
   background-color: #7530d5;
-  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.863);
-  height: 15%;
+  box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  height: 20rem;
+  text-align: center;
+}
+.break__section .break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 3rem;
+}
+.break__section .break__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-right: 7rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.459);
+  margin: 4rem 1.2rem 0 1.2rem;
+}
+.break__section .break__wrapper img {
+  width: 3.2rem;
+  justify-self: center;
+  align-self: center;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg) brightness(103%) contrast(106%);
+}
+.break__section .break__wrapper p {
+  line-height: 1.4rem;
+  color: white;
+  max-width: 19rem;
+}
+.break__section .break__wrapper:last-child {
+  border: none;
 }
 
-.parrallax {
+.skills {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
 }
-
-.parrallax_background {
+.skills__bg {
   background: url("/images/prism.png") center/cover;
   position: absolute;
   height: 100%;
@@ -133,15 +171,88 @@ nav ul a span {
   transform-style: preserve-3d;
   transform: translateZ(-5rem) scale(2);
 }
-
-.parrallax_title {
-  color: red;
+.skills__container {
+  width: 75%;
+  height: 100%;
+  display: grid;
+  margin: -8rem 0 0 -5rem;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-
-.parrallax_dev,
-.parrallax_design {
-  transform: translateZ(-5rem) scale(2);
-  z-index: 100;
+.skills__container .skills__dev {
+  grid-row: 1/span 2;
+  grid-column: 1/span 1;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  gap: 3.2rem;
+}
+.skills__container .skills__dev--icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5rem;
+}
+.skills__container .skills__dev--icons img {
+  width: 4rem;
+}
+.skills__container .skills__design {
+  grid-row: 1/span 1;
+  grid-column: 2/span 1;
+  align-self: center;
+  justify-self: center;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+.skills__container .skills__design--icons {
+  display: flex;
+  gap: 3rem;
+}
+.skills__container .skills__design--icons img {
+  width: 4rem;
+}
+.skills__container .skills__tools {
+  grid-row: 2/span 1;
+  grid-column: 2/span 1;
+  align-self: center;
+  justify-self: center;
+  margin-bottom: 8rem;
+  display: flex;
+  gap: 2.2rem;
+  flex-direction: column;
+}
+.skills__container .skills__tools--icons {
+  display: flex;
+  gap: 3rem;
+}
+.skills__container .skills__tools--icons img {
+  width: 4rem;
+}
+.skills__container .skills__heading {
+  display: flex;
+  width: 7rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #30d5c8;
+}
+.skills__container .skills__heading--img {
+  width: 2.3rem;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg) brightness(103%) contrast(106%);
+}
+.skills__container .skills__heading--title {
+  width: 4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  color: white;
 }
 
 .reviews {
