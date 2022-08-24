@@ -3,8 +3,8 @@ $background: #2e343e;
 $grey: #25272e;
 $grey--dark: #212121;
 $grey--darker: #181818;
-$purple: #a020f0;
-$purple--dark: #7530d5;
+$purple: #7530d5;
+$purple--dark: hsl(268, 58%, 24%);
 $blue: #30d5c8;
 $bluegreen: #2dffc4;
 $redorange: #ff402e;
@@ -83,8 +83,8 @@ main {
 
 // Nav ----------------------
 nav {
-  position: sticky;
   top: 0;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -111,7 +111,7 @@ nav {
       letter-spacing: 0.15rem;
       font-size: 1.2rem;
       span {
-        background-color: $purple--dark;
+        background-color: $purple;
         padding: 0.3rem 0.6rem;
         border-radius: 0.5rem;
       }
@@ -159,25 +159,32 @@ nav {
 
 // Break --------------------------------
 .break__section {
-  background-color: $purple--dark;
-  box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
-  height: 20rem;
-  text-align: center;
+  position: relative;
+  background: url("/images/svg_bg-bottom.svg") center / cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  display: grid;
+  place-items: center;
+  height: 30rem;
   .break {
     display: flex;
+    position: absolute;
+    opacity: 0.75;
     justify-content: center;
     align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    gap: 3rem;
+    text-align: center;
+    background-color: $purple--dark;
+    border-radius: 0.75rem;
+    width: 80rem;
+    height: 19rem;
+    gap: 5rem;
 
     &__wrapper {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      padding-right: 7rem;
+      padding-right: 5rem;
       border-right: 1px solid rgba(255, 255, 255, 0.459);
-      margin: 4rem 1.2rem 0 1.2rem;
       img {
         @include breakImg();
       }
@@ -298,13 +305,14 @@ nav {
 
 // Testimonials ---------------------------
 .reviews {
-  background-color: $blue;
-  height: 50%;
-  width: 100vw;
+  background: url("/images/svg_bg-top.svg") center / cover;
+  box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  background-repeat: no-repeat;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 30rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .reviews_container {
@@ -334,10 +342,11 @@ nav {
 .projects {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(50, 172, 159);
+  background: url("/images/svg_bg-bottom.svg") center / cover;
+  background-repeat: no-repeat;
   display: grid;
   transform-style: preserve-3d;
-  // place-items: center;
+  place-items: center;
 }
 
 .projects__wrapper {
@@ -364,8 +373,9 @@ nav {
   border-radius: 0.5rem;
   background-color: rgb(128, 0, 128);
   transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
   backface-visibility: hidden;
+  pointer-events: none;
   text-align: center;
 }
 
@@ -534,7 +544,7 @@ nav {
 // FOOTER ---------------------------
 footer {
   margin: 0 auto;
-  height: 40%;
+  height: 25rem;
   @include bgColor($grey);
   display: grid;
   align-items: center;

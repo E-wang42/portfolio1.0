@@ -44,9 +44,9 @@ main::-webkit-scrollbar-track:hover {
 }
 
 nav {
+  top: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -117,26 +117,33 @@ nav ul a span {
 }
 
 .break__section {
-  background-color: #7530d5;
-  box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
-  height: 20rem;
-  text-align: center;
+  position: relative;
+  background: url("/images/svg_bg-bottom.svg") center/cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  display: grid;
+  place-items: center;
+  height: 30rem;
 }
 .break__section .break {
   display: flex;
+  position: absolute;
+  opacity: 0.75;
   justify-content: center;
   align-items: center;
-  max-width: 100%;
-  margin: 0 auto;
-  gap: 3rem;
+  text-align: center;
+  background-color: hsl(268deg, 58%, 24%);
+  border-radius: 0.75rem;
+  width: 80rem;
+  height: 19rem;
+  gap: 5rem;
 }
 .break__section .break__wrapper {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-right: 7rem;
+  padding-right: 5rem;
   border-right: 1px solid rgba(255, 255, 255, 0.459);
-  margin: 4rem 1.2rem 0 1.2rem;
 }
 .break__section .break__wrapper img {
   width: 3.2rem;
@@ -256,13 +263,14 @@ nav ul a span {
 }
 
 .reviews {
-  background-color: #30d5c8;
-  height: 50%;
-  width: 100vw;
+  background: url("/images/svg_bg-top.svg") center/cover;
+  box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  background-repeat: no-repeat;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 30rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .reviews_container {
@@ -292,9 +300,11 @@ nav ul a span {
 .projects {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(50, 172, 159);
+  background: url("/images/svg_bg-bottom.svg") center/cover;
+  background-repeat: no-repeat;
   display: grid;
   transform-style: preserve-3d;
+  place-items: center;
 }
 
 .projects__wrapper {
@@ -321,9 +331,10 @@ nav ul a span {
   border-radius: 0.5rem;
   background-color: rgb(128, 0, 128);
   transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  pointer-events: none;
   text-align: center;
 }
 
@@ -502,7 +513,7 @@ nav ul a span {
 
 footer {
   margin: 0 auto;
-  height: 40%;
+  height: 25rem;
   background-color: #25272e;
   display: grid;
   align-items: center;
