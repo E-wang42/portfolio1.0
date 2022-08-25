@@ -160,7 +160,7 @@ nav {
 // Break --------------------------------
 .break__section {
   position: relative;
-  background: url("/images/svg_bg-bottom.svg") center / cover;
+  background: url("/images/svg_bg-top.svg") center / cover;
   background-repeat: no-repeat;
   box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   display: grid;
@@ -305,7 +305,7 @@ nav {
 
 // Testimonials ---------------------------
 .reviews {
-  background: url("/images/svg_bg-top.svg") center / cover;
+  background: url("/images/svg_bg-bottom.svg") center / cover;
   box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   background-repeat: no-repeat;
   position: relative;
@@ -342,19 +342,35 @@ nav {
 .projects {
   width: 100vw;
   height: 100vh;
-  background: url("/images/svg_bg-bottom.svg") center / cover;
+  // background: url("/images/svg_bg-bottom.svg") center / cover;
+  background-color: $background;
   background-repeat: no-repeat;
+  margin: 0 auto;
   display: grid;
-  transform-style: preserve-3d;
   place-items: center;
+}
+
+.projects__container {
+  position: absolute;
+  background-color: $purple--dark;
+  display: grid;
+  border-radius: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 2rem 5rem;
+  max-width: 100%;
+  max-height: 100%;
+  row-gap: 3rem;
+  column-gap: 8rem;
 }
 
 .projects__wrapper {
   position: relative;
   transform-style: preserve-3d;
   perspective: 150rem;
+  display: inline-block;
   width: 20rem;
-  height: 30rem;
+  height: 25rem;
 }
 
 .projects__wrapper:hover .projects__wrapper--card {
@@ -371,11 +387,11 @@ nav {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
-  background-color: rgb(128, 0, 128);
+  background-color: $background;
   transform-style: preserve-3d;
-  transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   backface-visibility: hidden;
-  pointer-events: none;
+  border: 1px solid $blue;
   text-align: center;
 }
 
@@ -387,30 +403,40 @@ nav {
   justify-content: space-between;
   align-items: center;
   transform: rotateY(0deg);
+  pointer-events: none;
 }
 
 .projectImage img {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem;
+  margin-top: 1.2rem;
+  width: 90%;
 }
 
 .tech-stack {
   margin-bottom: 5rem;
   display: flex;
-  gap: 1rem;
+  row-gap: 1.2rem;
+  column-gap: 0.5rem;
   justify-content: center;
   align-items: center;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
-}
-
-.tech-stack span {
-  background-color: white;
-  width: 5.5rem;
-  border-radius: 0.4rem;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  span {
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 0.2rem;
+    text-align: center;
+    width: 5.2rem;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    border: 1px solid white;
+  }
 }
 
 .projects__back {
@@ -419,22 +445,48 @@ nav {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  row-gap: 3rem;
 }
 
 .projects__back--wrapper {
   width: 80%;
   height: 10rem;
   margin-top: 2.5rem;
-  background-color: white;
+  h6 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 .back__buttons--wrapper {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  row-gap: 2.4rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  pointer-events: inherit;
+  a {
+    width: 80%;
+    display: block;
+    color: white;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    :hover {
+      background-color: $blue;
+      color: black;
+    }
+  }
 }
 
 .card-content {
@@ -443,7 +495,7 @@ nav {
 
 // CONTACT --------------------------
 .form__section {
-  background-color: $background;
+  background-color: $redorange;
   width: 100vw;
   height: 100vh;
   display: flex;
