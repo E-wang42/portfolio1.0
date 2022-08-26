@@ -19,22 +19,23 @@
     <title>placeholder</title>
   </head>
   <body>
-    <main>
+    <main class="main" id="main">
       <!-- --- Navigation --- -->
-      <nav>
-        <a href="#"><img src="./images/logo.png" alt="logo" /></a>
-        <ul>
-          <li><a href="#">skills</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">contact</a></li>
+
+      <nav class="navi">
+        <img class="logo" src="./images/logo.png" alt="logo" />
+        <ul class="nav__links">
+          <li class="nav__links--item"><a href="#skills">skills</a></li>
+          <li class="nav__links--item"><a href="#projects">projects</a></li>
+          <li class="nav__links--item"><a href="#contact">contact</a></li>
           <li>
-            <a href="#"><span>blog</span></a>
+            <a href="https://www.google.com/"><span>blog</span></a>
           </li>
         </ul>
       </nav>
 
       <!-- --- Hero --- -->
-      <!-- <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero_div">
           <h1 class="hero_div-heading">
             Hi, I'm a Front-End Developer with an eye for design. Let's work
@@ -44,10 +45,10 @@
         <div class="hero_down">
           <a href="#"><i class="fa-solid fa-circle-down fa-3x"></i></a>
         </div>
-      </section> -->
+      </section>
 
       <!-- -- break -- -->
-      <!-- <section class="break__section">
+      <section class="break__section">
         <div class="break">
           <div class="break__wrapper">
             <img
@@ -78,10 +79,10 @@
             <p class="break__grid--6">Accessibility</p>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- --- skills --- -->
-      <!-- <section class="skills">
+      <section class="skills" id="skills">
         <div class="skills__container">
           <div class="skills__dev">
             <div class="skills__heading">
@@ -144,7 +145,105 @@
           </div>
         </div>
         <div class="skills__bg"></div>
-      </section> -->
+      </section>
+
+      <!-- --- projects --- -->
+      <section class="projects" id="projects">
+        <div class="projects__container">
+          <div class="projects__wrapper">
+            <figure class="projects__wrapper--card">
+              <div class="card-content projectImage">
+                <img src="/images/construction1.jpg" alt="image" />
+              </div>
+              <div class="card-content tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>API</span>
+              </div>
+            </figure>
+            <figure class="projects__back">
+              <div class="card-content projects__back--wrapper">
+                <h6>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolore dolorum dignissimos aspernatur excepturi
+                </h6>
+              </div>
+              <div class="card-content back__buttons--wrapper">
+                <a href="https://www.google.com/">code</a>
+                <a href="#">demo</a>
+              </div>
+            </figure>
+          </div>
+          <div class="projects__wrapper">
+            <figure class="projects__wrapper--card">
+              <div class="card-content projectImage">
+                <img src="/images/construction1.jpg" alt="image" />
+              </div>
+              <div class="card-content tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>API</span>
+              </div>
+            </figure>
+            <figure class="projects__back">
+              <div class="card-content projects__back--wrapper">
+                <h6>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolore dolorum dignissimos aspernatur excepturi
+                </h6>
+              </div>
+              <div class="card-content back__buttons--wrapper">
+                <a href="#">code</a>
+                <a href="#">demo</a>
+              </div>
+            </figure>
+          </div>
+          <div class="projects__wrapper">
+            <figure class="projects__wrapper--card">
+              <div class="card-content projectImage">
+                <img src="/images/construction1.jpg" alt="image" />
+              </div>
+              <div class="card-content tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>API</span>
+              </div>
+            </figure>
+            <figure class="projects__back">
+              <div class="card-content projects__back--wrapper">
+                <h6>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolore dolorum dignissimos aspernatur excepturi
+                </h6>
+              </div>
+              <div class="card-content back__buttons--wrapper">
+                <a href="#">code</a>
+                <a href="#">demo</a>
+              </div>
+            </figure>
+          </div>
+          <div class="projects__wrapper">
+            <figure class="projects__wrapper--card">
+              <div class="card-content projectImage">
+                <img src="/images/construction1.jpg" alt="image" />
+              </div>
+              <div class="card-content tech-stack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span
+                ><span>API</span>
+              </div>
+            </figure>
+            <figure class="projects__back">
+              <div class="card-content projects__back--wrapper">
+                <h6>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolore dolorum dignissimos aspernatur excepturi
+                </h6>
+              </div>
+              <div class="card-content back__buttons--wrapper">
+                <a href="#">code</a>
+                <a href="#">demo</a>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
 
       <!-- --- testimonials --- -->
       <section class="reviews">
@@ -187,106 +286,8 @@
         </div>
       </section>
 
-      <!-- --- projects --- -->
-      <section class="projects">
-        <div class="projects__container">
-          <div class="projects__wrapper">
-            <figure class="projects__wrapper--card">
-              <div class="card-content projectImage">
-                <img src="/images/construction1.jpg" alt="image" />
-              </div>
-              <div class="card-content tech-stack">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span
-                ><span>API</span>
-              </div>
-            </figure>
-            <figure class="projects__back">
-              <div class="card-content projects__back--wrapper">
-                <h6>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolore dolorum dignissimos aspernatur excepturi
-                </h6>
-              </div>
-              <div class="card-content back__buttons--wrapper">
-                <a href="#">code</a>
-                <a href="#">demo</a>
-              </div>
-            </figure>
-          </div>
-          <div class="projects__wrapper">
-            <figure class="projects__wrapper--card">
-              <div class="card-content projectImage">
-                <img src="/images/construction1.jpg" alt="image" />
-              </div>
-              <div class="card-content tech-stack">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span
-                ><span>API</span>
-              </div>
-            </figure>
-            <figure class="projects__back">
-              <div class="card-content projects__back--wrapper">
-                <h6>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolore dolorum dignissimos aspernatur excepturi
-                </h6>
-              </div>
-              <div class="card-content back__buttons--wrapper">
-                <a href="#">code</a>
-                <a href="#">demo</a>
-              </div>
-            </figure>
-          </div>
-          <div class="projects__wrapper">
-            <figure class="projects__wrapper--card">
-              <div class="card-content projectImage">
-                <img src="/images/construction1.jpg" alt="image" />
-              </div>
-              <div class="card-content tech-stack">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span
-                ><span>API</span>
-              </div>
-            </figure>
-            <figure class="projects__back">
-              <div class="card-content projects__back--wrapper">
-                <h6>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolore dolorum dignissimos aspernatur excepturi
-                </h6>
-              </div>
-              <div class="card-content back__buttons--wrapper">
-                <a href="#">code</a>
-                <a href="#">demo</a>
-              </div>
-            </figure>
-          </div>
-          <div class="projects__wrapper">
-            <figure class="projects__wrapper--card">
-              <div class="card-content projectImage">
-                <img src="/images/construction1.jpg" alt="image" />
-              </div>
-              <div class="card-content tech-stack">
-                <span>HTML</span><span>CSS</span><span>JavaScript</span
-                ><span>API</span>
-              </div>
-            </figure>
-            <figure class="projects__back">
-              <div class="card-content projects__back--wrapper">
-                <h6>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolore dolorum dignissimos aspernatur excepturi
-                </h6>
-              </div>
-              <div class="card-content back__buttons--wrapper">
-                <a href="#">code</a>
-                <a href="#">demo</a>
-              </div>
-            </figure>
-          </div>
-        </div>
-      </section>
-
       <!-- --- contact --- -->
-      <section class="form__section">
+      <section class="form__section" id="contact">
         <form
           action="https://formspree.io/f/mvoleavg"
           class="form__form"
