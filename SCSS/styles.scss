@@ -40,8 +40,8 @@ $Montserrat: "Montserrat", sans-serif;
 }
 
 // scroll fade-in
-.hidden {
-  animation: scrollEffect 0.6s ease-in;
+.show {
+  animation: scrollEffect 500ms ease-in;
 }
 
 @keyframes scrollEffect {
@@ -50,7 +50,7 @@ $Montserrat: "Montserrat", sans-serif;
     transform: translateY(8rem);
   }
   to {
-    opacity: 0.75;
+    opacity: 1;
     transform: translateY(0);
   }
 }

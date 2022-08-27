@@ -1,6 +1,6 @@
-.hidden {
-  -webkit-animation: scrollEffect 0.6s ease-in;
-          animation: scrollEffect 0.6s ease-in;
+.show {
+  -webkit-animation: scrollEffect 500ms ease-in;
+          animation: scrollEffect 500ms ease-in;
 }
 
 @-webkit-keyframes scrollEffect {
@@ -9,7 +9,7 @@
     transform: translateY(8rem);
   }
   to {
-    opacity: 0.75;
+    opacity: 1;
     transform: translateY(0);
   }
 }
@@ -20,7 +20,7 @@
     transform: translateY(8rem);
   }
   to {
-    opacity: 0.75;
+    opacity: 1;
     transform: translateY(0);
   }
 }

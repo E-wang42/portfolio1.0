@@ -6,10 +6,6 @@ const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const skills = document.querySelector(".skills") as HTMLElement;
 const projects = document.querySelector(".projects") as HTMLElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
-// const breakSection = document.querySelector(".break__div") as HTMLDivElement;
-// const reviews = document.querySelector(".reviews__container") as HTMLDivElement;
-const fadeSections = document.querySelectorAll(".scrollSection");
-const scrollSection = document.querySelectorAll(".scroll");
 
 //logo scroll
 logo.addEventListener("click", function () {
@@ -22,7 +18,7 @@ logo.addEventListener("click", function () {
 //nav fade-in
 const stickyNav = function (entries: any) {
   const [entry] = entries;
-  console.log(entry); //return type?
+  console.log(entry); //debugger
   if (!entry.isIntersecting) {
     nav.classList.add("sticky");
   } else {
@@ -38,58 +34,25 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 
 headerObserver.observe(hero);
 
-//sections slide-in
+//sections fade-in
+const sectionList = document.querySelectorAll(".fade-in");
 
-const fadeIn = function (entries: any, fadeIn: any) {
+const revealSection = function (entries: any, observer: any) {
   const [entry] = entries;
-  console.log(entry);
+  console.log(entry); //debugger
+
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.classList.add("show");
+    observer.unobserve(entry.target);
+  }
 };
 
-const scrollObserver = new IntersectionObserver(fadeIn, {
-  threshold: 0,
+const sectionObserver = new IntersectionObserver(revealSection, {
+  threshold: 0.15,
 });
 
-scrollObserver.observe(scrollSection);
-
-//---------------------------------------
-
-// const io = function (entries: any) {
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) {
-//     sectionList.forEach((e) => {
-//       e.classList.add("hidden");
-//     });
-//   }
-// };
-
-// const sectionObserver = new IntersectionObserver(io, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: "10px",
-// });
-
-// sectionObserver.observe(onScroll);
-
-// ----------------------------
-// const sectionList = document.querySelectorAll("div");
-
-// const revealSection = function (entries: any, observer: any) {
-//   const [entry] = entries;
-//   console.log(entry);
-
-//   if (!entry.isIntersecting) return;
-
-//   entry.target.classList.remove("hidden");
-
-//   observer.unobserve(entry.target);
-// };
-
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0.15,
-// });
-
-// sectionList.forEach((section) => {
-//   sectionObserver.observe(section);
-//   section.classList.add("hidden");
-// });
+sectionList.forEach((section) => {
+  sectionObserver.observe(section);
+});
