@@ -1,3 +1,29 @@
+.hidden {
+  -webkit-animation: scrollEffect 0.6s ease-in;
+          animation: scrollEffect 0.6s ease-in;
+}
+
+@-webkit-keyframes scrollEffect {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollEffect {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
 *,
 *::before,
 *::after {
@@ -136,16 +162,20 @@ nav ul a span {
 }
 .hero_down {
   text-align: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 4.5rem;
 }
 .hero_down a {
   color: #25272e;
+}
+.hero_down a :hover {
+  color: #30d5c8;
 }
 
 .break__section {
   position: relative;
   background: url("/images/svg_bg-top.svg") center/cover;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
   box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   display: grid;
   place-items: center;
@@ -154,7 +184,7 @@ nav ul a span {
 .break__section .break {
   display: flex;
   position: absolute;
-  opacity: 0.75;
+  opacity: 0.85;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -299,7 +329,7 @@ nav ul a span {
   place-items: center;
 }
 
-.reviews_container {
+.reviews__container {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -311,7 +341,7 @@ nav ul a span {
   height: 15rem;
 }
 
-.reviews_container-cards {
+.reviews__container--cards {
   height: 12rem;
   width: 24rem;
   background-color: white;

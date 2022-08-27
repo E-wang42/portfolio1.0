@@ -39,6 +39,21 @@ $Montserrat: "Montserrat", sans-serif;
   max-width: 19rem;
 }
 
+// scroll fade-in
+.hidden {
+  animation: scrollEffect 0.6s ease-in;
+}
+
+@keyframes scrollEffect {
+  from {
+    opacity: 0;
+    transform: translateY(8rem);
+  }
+  to {
+    opacity: 0.75;
+    transform: translateY(0);
+  }
+}
 // MAIN ---------------
 *,
 *::before,
@@ -167,9 +182,12 @@ nav {
   }
   &_down {
     text-align: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: 4.5rem;
     a {
       color: $grey;
+      :hover {
+        color: $blue;
+      }
     }
   }
 }
@@ -179,6 +197,7 @@ nav {
   position: relative;
   background: url("/images/svg_bg-top.svg") center / cover;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
   box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   display: grid;
   place-items: center;
@@ -186,7 +205,7 @@ nav {
   .break {
     display: flex;
     position: absolute;
-    opacity: 0.75;
+    opacity: 0.85;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -195,7 +214,6 @@ nav {
     width: 80rem;
     height: 19rem;
     gap: 5rem;
-
     &__wrapper {
       display: flex;
       flex-direction: column;
@@ -333,7 +351,7 @@ nav {
   place-items: center;
 }
 
-.reviews_container {
+.reviews__container {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(5, auto);
@@ -345,7 +363,7 @@ nav {
   height: 15rem;
 }
 
-.reviews_container-cards {
+.reviews__container--cards {
   height: 12rem;
   width: 24rem;
   background-color: white;
