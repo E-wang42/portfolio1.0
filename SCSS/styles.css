@@ -318,41 +318,6 @@ nav ul a span {
   color: white;
 }
 
-.reviews {
-  background: url("/images/svg_bg-bottom.svg") center/cover;
-  box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486), 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
-  background-repeat: no-repeat;
-  position: relative;
-  height: 30rem;
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-
-.reviews__container {
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  overflow: hidden;
-  width: 70%;
-  height: 15rem;
-}
-
-.reviews__container--cards {
-  height: 12rem;
-  width: 24rem;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
 .projects {
   width: 100vw;
   height: 100vh;
@@ -407,6 +372,7 @@ nav ul a span {
           backface-visibility: hidden;
   border: 1px solid #30d5c8;
   text-align: center;
+  pointer-events: none;
 }
 
 .projects__wrapper--card {
@@ -417,7 +383,6 @@ nav ul a span {
   justify-content: space-between;
   align-items: center;
   transform: rotateY(0deg);
-  pointer-events: none;
 }
 
 .projectImage img {
@@ -488,7 +453,8 @@ nav ul a span {
   width: 100%;
   justify-content: center;
   align-items: center;
-  pointer-events: inherit;
+  transform: none !important;
+  pointer-events: auto !important;
 }
 .back__buttons--wrapper a {
   width: 80%;
@@ -501,13 +467,49 @@ nav ul a span {
   text-transform: uppercase;
   letter-spacing: 0.2rem;
 }
-.back__buttons--wrapper a :hover {
+.back__buttons--wrapper a:hover {
   background-color: #30d5c8;
   color: black;
+  transition: 0.2s ease-in-out;
 }
 
 .card-content {
-  transform: translateZ(6rem) scale(0.96);
+  transform: translateZ(8rem) scale(0.96);
+}
+
+.reviews {
+  background: url("/images/svg_bg-bottom.svg") center/cover;
+  box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486), 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
+  background-repeat: no-repeat;
+  position: relative;
+  height: 30rem;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.reviews__container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  overflow: hidden;
+  width: 65%;
+  height: 18rem;
+}
+
+.reviews__container--cards {
+  height: 16rem;
+  width: 30rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .form__section {

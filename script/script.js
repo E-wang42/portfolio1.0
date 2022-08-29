@@ -6,6 +6,7 @@ var hero = document.querySelector(".hero");
 var skills = document.querySelector(".skills");
 var projects = document.querySelector(".projects");
 var contact = document.querySelector(".forms__section");
+var carouselCards = document.querySelectorAll(".reviews__container--cards");
 //logo scroll
 logo.addEventListener("click", function () {
     main.scrollTo({

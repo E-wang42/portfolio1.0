@@ -6,6 +6,7 @@ const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const skills = document.querySelector(".skills") as HTMLElement;
 const projects = document.querySelector(".projects") as HTMLElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
+const carouselCards = document.querySelectorAll(".reviews__container--cards");
 
 //logo scroll
 logo.addEventListener("click", function () {
