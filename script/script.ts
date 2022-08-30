@@ -1,12 +1,8 @@
 const main = document.querySelector(".main") as HTMLElement;
 const nav = document.querySelector(".navi") as HTMLElement;
 const logo = document.querySelector(".logo") as HTMLImageElement;
-const navLinks = document.querySelector(".nav__links") as HTMLElement;
 const hero = document.querySelector(".hero") as HTMLHeadingElement;
-const skills = document.querySelector(".skills") as HTMLElement;
-const projects = document.querySelector(".projects") as HTMLElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
-const carouselCards = document.querySelectorAll(".reviews__container--cards");
 
 //logo scroll
 logo.addEventListener("click", function () {
@@ -27,13 +23,14 @@ const stickyNav = function (entries: any) {
   }
 };
 
+//init intersection obvserver
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
   rootMargin: "-70px",
 });
 
-headerObserver.observe(hero);
+headerObserver.observe(hero); //element observed
 
 //sections fade-in
 const sectionList = document.querySelectorAll(".fade-in");

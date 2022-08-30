@@ -487,21 +487,49 @@ nav ul a span {
   display: grid;
   place-items: center;
 }
-
 .reviews__container {
-  position: absolute;
+  width: 100%;
+  height: 24rem;
   display: grid;
-  grid-template-columns: repeat(5, auto);
-  align-items: center;
-  justify-content: center;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
-  overflow: hidden;
-  width: 65%;
-  height: 18rem;
+  place-items: center;
+  scroll-behavior: smooth;
+  opacity: 0.8;
+  border-radius: 0.5rem;
 }
-
-.reviews__container--cards {
+.reviews__container .reviews__arrow {
+  position: absolute;
+  height: 3.5rem;
+  width: 3.5rem;
+  font-size: 2.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.5;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.reviews__container .reviews__arrow:hover {
+  opacity: 1;
+  border: none;
+}
+.reviews__container .reviews__wrapper {
+  width: 100%;
+  max-width: 70rem;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  background-color: hsl(268deg, 58%, 24%);
+  padding: 0 4rem;
+  border-radius: 0.5rem;
+}
+.reviews__container .reviews__wrapper--card {
+  position: absolute;
   height: 16rem;
   width: 30rem;
   background-color: white;
@@ -510,6 +538,14 @@ nav ul a span {
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+#arrow-prev {
+  left: 12%;
+}
+
+#arrow-next {
+  right: 12%;
 }
 
 .form__section {
