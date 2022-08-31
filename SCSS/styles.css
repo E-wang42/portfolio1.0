@@ -188,7 +188,7 @@ nav ul a span {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: hsl(268deg, 58%, 24%);
+  background-color: #3b1a61;
   border-radius: 0.75rem;
   width: 80rem;
   height: 19rem;
@@ -331,7 +331,7 @@ nav ul a span {
 
 .projects__container {
   position: absolute;
-  background-color: hsl(268deg, 58%, 24%);
+  background-color: #3b1a61;
   display: grid;
   border-radius: 0.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -524,7 +524,7 @@ nav ul a span {
   align-items: center;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  background-color: hsl(268deg, 58%, 24%);
+  background-color: #3b1a61;
   padding: 0 4rem;
   border-radius: 0.5rem;
 }
@@ -549,17 +549,16 @@ nav ul a span {
 }
 
 .form__section {
-  background-color: #ff402e;
+  background-color: #2e343e;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .form__form {
   border: 2px solid white;
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: 0.5rem;
 }
 

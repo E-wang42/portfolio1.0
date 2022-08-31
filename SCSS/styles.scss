@@ -4,7 +4,7 @@ $grey: #25272e;
 $grey--dark: #212121;
 $grey--darker: #181818;
 $purple: #7530d5;
-$purple--dark: hsl(268, 58%, 24%);
+$purple--dark: #3b1a61;
 $blue: #30d5c8;
 $bluegreen: #2dffc4;
 $redorange: #ff402e;
@@ -573,17 +573,30 @@ nav {
 
 // CONTACT --------------------------
 .form__section {
-  background-color: $redorange;
+  background-color: $background;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+}
+
+.form__container {
+  // background-image: linear-gradient(105deg, $background 50%, transparent),
+  //   url("/images/bg1.jpg");
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // width: 75rem;
+  // height: 45rem;
+  // border-radius: 0.5rem;
+  // display: flex;
+  // justify-content: start;
+  // align-items: center;
 }
 
 .form__form {
   border: 2px solid white;
-  padding: 3rem;
+  padding: 3.5rem;
   border-radius: 0.5rem;
 }
 

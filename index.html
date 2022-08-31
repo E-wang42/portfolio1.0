@@ -24,6 +24,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
     ></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script defer src="/script/script.js"></script>
     <title>placeholder</title>
   </head>
@@ -51,6 +52,14 @@
             together.
           </h1>
         </div>
+        <lottie-player
+          src="https://lottie.host/b11e039d-c3c2-49e8-a18b-781a5e7d5007/a6d3eSyq5B.json"
+          background="transparent"
+          speed="1"
+          style="width: 500px; height: 500px"
+          loop
+          autoplay
+        ></lottie-player>
         <div class="hero_down">
           <a href="#break"><i class="fa-solid fa-circle-down fa-3x"></i></a>
         </div>
@@ -275,52 +284,54 @@
 
       <!-- --- contact --- -->
       <section class="form__section" id="contact">
-        <form
-          action="https://formspree.io/f/mvoleavg"
-          class="form__form fade-in"
-          method="post"
-        >
-          <div class="form__div">
-            <input
-              class="form__input"
-              autocomplete="off"
-              type="text"
-              name="name"
-              required
-              placeholder=" "
-            />
-            <label class="form__label" for="name">Name</label>
-          </div>
-          <div class="form__div">
-            <input
-              class="form__input"
-              autocomplete="off"
-              name="email"
-              type="text"
-              required
-              placeholder=" "
-            />
-            <label class="form__label" for="email">Email</label>
-          </div>
-          <div class="form__div">
-            <input class="form__input" type="text" placeholder=" " />
-            <label class="form__label" for="subject">Subject</label>
-          </div>
-          <div class="form__textarea">
-            <textarea
-              class="form__input"
-              placeholder=" "
-              required
-              name="message"
-              id="message"
-              cols="20"
-              rows="15"
-            ></textarea>
-            <a target="_blank" href=""></a>
-            <label class="form__label" for="message">Message</label>
-          </div>
-          <button class="form__button">Submit</button>
-        </form>
+        <div class="form__container">
+          <form
+            action="https://formspree.io/f/mvoleavg"
+            class="form__form"
+            method="post"
+          >
+            <div class="form__div">
+              <input
+                class="form__input"
+                autocomplete="off"
+                type="text"
+                name="name"
+                required
+                placeholder=" "
+              />
+              <label class="form__label" for="name">Name</label>
+            </div>
+            <div class="form__div">
+              <input
+                class="form__input"
+                autocomplete="off"
+                name="email"
+                type="text"
+                required
+                placeholder=" "
+              />
+              <label class="form__label" for="email">Email</label>
+            </div>
+            <div class="form__div">
+              <input class="form__input" type="text" placeholder=" " />
+              <label class="form__label" for="subject">Subject</label>
+            </div>
+            <div class="form__textarea">
+              <textarea
+                class="form__input"
+                placeholder=" "
+                required
+                name="message"
+                id="message"
+                cols="20"
+                rows="15"
+              ></textarea>
+              <a target="_blank" href=""></a>
+              <label class="form__label" for="message">Message</label>
+            </div>
+            <button class="form__button">Submit</button>
+          </form>
+        </div>
       </section>
 
       <!-- --- footer --- -->
