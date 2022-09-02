@@ -111,6 +111,7 @@ nav ul a span {
   height: 3.5rem;
   position: -webkit-sticky !important;
   position: sticky !important;
+  background-color: #25272e;
   -webkit-animation: navFade 0.8s;
           animation: navFade 0.8s;
   transition: 0.5s ease-in;
