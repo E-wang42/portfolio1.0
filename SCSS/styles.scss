@@ -11,7 +11,7 @@ $redorange: #ff402e;
 
 // -- fonts --
 $Rubik: "Rubik", sans-serif;
-$Montserrat: "Montserrat", sans-serif;
+$Syne: "Syne", sans-serif;
 
 // -- Mixins --
 @mixin bgColor($color) {
@@ -98,7 +98,9 @@ main {
 
 // Nav ----------------------
 nav {
-  position: relative;
+  width: 100vw;
+  height: 3.5rem;
+  position: static;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,7 +110,6 @@ nav {
   img {
     width: 6rem;
     cursor: pointer;
-    filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
     &:hover {
       filter: drop-shadow(0 0 0.75rem $blue);
     }
@@ -127,7 +128,6 @@ nav {
       span {
         background-color: $purple;
         padding: 0.3rem 0.6rem;
-        border-radius: 0.5rem;
       }
     }
   }
@@ -135,8 +135,9 @@ nav {
 
 .sticky {
   top: 0;
-  width: 100%;
-  position: sticky;
+  width: 100vw;
+  height: 3.5rem;
+  position: sticky !important;
   animation: navFade 0.8s;
   transition: 0.5s ease-in;
   box-shadow: 0 0.75rem 0.5rem rgba(0, 0, 0, 0.288);
@@ -144,7 +145,7 @@ nav {
 
 @keyframes navFade {
   from {
-    opacity: 0.3;
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -160,41 +161,75 @@ nav {
   width: 100vw;
   display: grid;
   place-items: center;
-
   &__container {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 4rem;
     width: 80%;
     height: 50rem;
-    // border: 1px solid orangered;
+    justify-content: center;
+    align-items: flex-start;
   }
   &__content {
-    margin: 5rem 0 0 2rem;
+    margin: 10rem 0 0 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 1.2rem;
     justify-content: center;
-    // align-items: centers;
-    // border: 1px solid lime;
-    width: 50rem;
+    font-family: $Syne;
+    width: 40rem;
     max-height: 50%;
     h1 {
       color: white;
+      font-size: 2.5rem;
+      letter-spacing: 0.12rem;
     }
-    h5 {
-      color: white;
+    h3 {
+      color: #e1dbd6;
+      font-size: 1.8rem;
     }
     p {
-      color: white;
+      color: #c4c3c0;
+      font-size: 1.5rem;
     }
     &--buttons {
       margin-top: 4rem;
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
+      a {
+        text-decoration: none;
+        background-color: $blue;
+      }
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #c4c3c0;
+        column-gap: 1rem;
+        font-size: 1.2rem;
+        padding: 0 1.2rem;
+        cursor: pointer;
+        div {
+          border-right: 1px solid #c4c3c0;
+          display: inline-block;
+          height: 3.5rem;
+        }
+        p {
+          background-color: transparent;
+          border: none;
+          color: #f5f5f5;
+          font-size: 1.1rem;
+        }
+        i {
+          color: #f5f5f5;
+        }
+      }
     }
   }
+  #magic {
+    color: black;
+  }
+
   .hero__animation {
-    // border: 1px solid red;
     margin: 5rem auto;
     filter: drop-shadow(0.6rem 0.65rem 0.85rem black);
   }
@@ -202,7 +237,7 @@ nav {
   // &_div {
   //   top: 8rem;
   //   left: -22rem;
-  //   border-radius: 1.2rem;
+  //
   //   box-shadow: 1.2rem 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   //   position: relative;
   //   background-color: rgba(0, 0, 0, 0.651);
@@ -251,7 +286,7 @@ nav {
     align-items: center;
     text-align: center;
     background-color: $purple--dark;
-    border-radius: 0.75rem;
+
     width: 80rem;
     height: 19rem;
     gap: 5rem;
@@ -395,7 +430,7 @@ nav {
   position: absolute;
   background-color: $purple--dark;
   display: grid;
-  border-radius: 0.5rem;
+
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   // padding: 2rem 5rem;
@@ -429,7 +464,7 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+
   background-color: $background;
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -453,7 +488,7 @@ nav {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 0.5rem;
+
   margin-top: 1.2rem;
   width: 90%;
 }
@@ -473,7 +508,7 @@ nav {
     font-size: 0.8rem;
     font-weight: 350;
     background-color: white;
-    border-radius: 0.2rem;
+
     text-align: center;
     width: 5.2rem;
     padding: 0.5rem 0;
@@ -523,7 +558,7 @@ nav {
     padding: 0.5rem;
     text-decoration: none;
     border: 1px solid white;
-    border-radius: 0.5rem;
+
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     &:hover {
@@ -557,7 +592,7 @@ nav {
     // overflow: hidden;
     scroll-behavior: smooth;
     opacity: 0.8;
-    border-radius: 0.5rem;
+
     .reviews__arrow {
       position: absolute;
       height: 3.5rem;
@@ -568,7 +603,7 @@ nav {
       opacity: 0.5;
       background-color: white;
       border: none;
-      border-radius: 50%;
+
       display: grid;
       place-items: center;
 
@@ -588,7 +623,6 @@ nav {
       column-gap: 2rem;
       background-color: $purple--dark;
       padding: 0 4rem;
-      border-radius: 0.5rem;
 
       &--card {
         position: absolute;
@@ -596,7 +630,7 @@ nav {
         width: 30rem;
         background-color: white;
         border: 1px solid black;
-        border-radius: 0.5rem;
+
         box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
         cursor: grab;
       }
@@ -629,7 +663,7 @@ nav {
 //   background-repeat: no-repeat;
 //   width: 75rem;
 //   height: 45rem;
-//   border-radius: 0.5rem;
+//
 //   display: flex;
 //   justify-content: start;
 //   align-items: center;
@@ -638,7 +672,6 @@ nav {
 .form__form {
   border: 2px solid white;
   padding: 3.5rem;
-  border-radius: 0.5rem;
 }
 
 .form__div {
@@ -668,7 +701,7 @@ nav {
   height: 100%;
   background-color: transparent;
   border: 2px solid white;
-  border-radius: 0.5rem;
+
   outline: none;
   text-indent: 1.4rem;
   color: white;
@@ -709,7 +742,7 @@ nav {
   height: 100%;
   background-color: transparent;
   border: 2px solid white;
-  border-radius: 0.5rem;
+
   outline: none;
   text-indent: 1.2rem;
   color: white;
