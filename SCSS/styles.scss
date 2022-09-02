@@ -54,6 +54,45 @@ $Syne: "Syne", sans-serif;
     transform: translateY(0);
   }
 }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 // MAIN ---------------
 *,
 *::before,
@@ -119,15 +158,31 @@ nav {
     justify-content: space-between;
     gap: 3rem;
     list-style: none;
-    a {
-      text-decoration: none;
-      color: white;
-      text-transform: capitalize;
-      letter-spacing: 0.12rem;
-      font-size: 1.2rem;
-      span {
-        background-color: $purple;
-        padding: 0.3rem 0.6rem;
+    li {
+      position: relative;
+      padding-bottom: 0.2rem;
+      &:hover .slideIn {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: capitalize;
+        letter-spacing: 0.12rem;
+        font-size: 1.2rem;
+        span {
+          background-color: $purple;
+          padding: 0.3rem 0.6rem;
+        }
+      }
+      .slideIn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        border-bottom: 2px solid $blue;
+        transition: width 0.3s;
       }
     }
   }
@@ -169,6 +224,7 @@ nav {
     height: 50rem;
     justify-content: center;
     align-items: flex-start;
+    border: 1px solid $redorange;
   }
   &__content {
     margin: 10rem 0 0 2rem;
@@ -179,23 +235,29 @@ nav {
     font-family: $Syne;
     width: 40rem;
     max-height: 50%;
+    border: 1px solid $redorange;
     h1 {
       color: white;
       font-size: 2.5rem;
       letter-spacing: 0.12rem;
+      animation: moveInLeft 1.8s ease-out;
     }
     h3 {
       color: #e1dbd6;
       font-size: 1.8rem;
+      animation: moveInRight 1.8s ease-out;
     }
     p {
       color: #c4c3c0;
       font-size: 1.5rem;
+      animation: moveInLeft 1.8s ease-out;
     }
     &--buttons {
-      margin-top: 4rem;
-      display: flex;
       gap: 2rem;
+      display: flex;
+      margin-top: 4rem;
+      animation: moveInButton 0.8s ease-out 0.75s;
+      animation-fill-mode: backwards;
       a {
         text-decoration: none;
         background-color: $blue;

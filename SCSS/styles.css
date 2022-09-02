@@ -24,6 +24,78 @@
     transform: translateY(0);
   }
 }
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 *,
 *::before,
 *::after {
@@ -93,16 +165,32 @@ nav ul {
   gap: 3rem;
   list-style: none;
 }
-nav ul a {
+nav ul li {
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+nav ul li:hover .slideIn {
+  width: 100%;
+}
+nav ul li a {
   text-decoration: none;
   color: white;
   text-transform: capitalize;
   letter-spacing: 0.12rem;
   font-size: 1.2rem;
 }
-nav ul a span {
+nav ul li a span {
   background-color: #7530d5;
   padding: 0.3rem 0.6rem;
+}
+nav ul li .slideIn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  border-bottom: 2px solid #30d5c8;
+  transition: width 0.3s;
 }
 
 .sticky {
@@ -151,6 +239,7 @@ nav ul a span {
   height: 50rem;
   justify-content: center;
   align-items: flex-start;
+  border: 1px solid #ff402e;
 }
 .hero__content {
   margin: 10rem 0 0 2rem;
@@ -161,24 +250,35 @@ nav ul a span {
   font-family: "Syne", sans-serif;
   width: 40rem;
   max-height: 50%;
+  border: 1px solid #ff402e;
 }
 .hero__content h1 {
   color: white;
   font-size: 2.5rem;
   letter-spacing: 0.12rem;
+  -webkit-animation: moveInLeft 1.8s ease-out;
+          animation: moveInLeft 1.8s ease-out;
 }
 .hero__content h3 {
   color: #e1dbd6;
   font-size: 1.8rem;
+  -webkit-animation: moveInRight 1.8s ease-out;
+          animation: moveInRight 1.8s ease-out;
 }
 .hero__content p {
   color: #c4c3c0;
   font-size: 1.5rem;
+  -webkit-animation: moveInLeft 1.8s ease-out;
+          animation: moveInLeft 1.8s ease-out;
 }
 .hero__content--buttons {
-  margin-top: 4rem;
-  display: flex;
   gap: 2rem;
+  display: flex;
+  margin-top: 4rem;
+  -webkit-animation: moveInButton 0.8s ease-out 0.75s;
+          animation: moveInButton 0.8s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 .hero__content--buttons a {
   text-decoration: none;
