@@ -33,24 +33,27 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(hero); //element observed
 
 //sections fade-in
-const sectionList = document.querySelectorAll(".fade-in");
+function slideUp() {
+  const sectionList = document.querySelectorAll(".fade-in");
 
-const revealSection = function (entries: any, observer: any) {
-  const [entry] = entries;
-  console.log(entry); //debugger
+  const revealSection = function (entries: any, observer: any) {
+    const [entry] = entries;
+    console.log(entry); //debugger
 
-  if (!entry.isIntersecting) {
-    return;
-  } else {
-    entry.target.classList.add("show");
-    observer.unobserve(entry.target);
-  }
-};
+    if (!entry.isIntersecting) {
+      return;
+    } else {
+      entry.target.classList.add("slideUp");
+      observer.unobserve(entry.target);
+    }
+  };
 
-const sectionObserver = new IntersectionObserver(revealSection, {
-  threshold: 0.15,
-});
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    threshold: 0.15,
+  });
 
-sectionList.forEach((section) => {
-  sectionObserver.observe(section);
-});
+  sectionList.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+}
+slideUp();

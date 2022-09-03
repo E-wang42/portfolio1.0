@@ -29,21 +29,24 @@ var headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(hero); //element observed
 //sections fade-in
-var sectionList = document.querySelectorAll(".fade-in");
-var revealSection = function (entries, observer) {
-    var entry = entries[0];
-    console.log(entry); //debugger
-    if (!entry.isIntersecting) {
-        return;
-    }
-    else {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-    }
-};
-var sectionObserver = new IntersectionObserver(revealSection, {
-    threshold: 0.15
-});
-sectionList.forEach(function (section) {
-    sectionObserver.observe(section);
-});
+function slideUp() {
+    var sectionList = document.querySelectorAll(".fade-in");
+    var revealSection = function (entries, observer) {
+        var entry = entries[0];
+        console.log(entry); //debugger
+        if (!entry.isIntersecting) {
+            return;
+        }
+        else {
+            entry.target.classList.add("slideUp");
+            observer.unobserve(entry.target);
+        }
+    };
+    var sectionObserver = new IntersectionObserver(revealSection, {
+        threshold: 0.15
+    });
+    sectionList.forEach(function (section) {
+        sectionObserver.observe(section);
+    });
+}
+slideUp();

@@ -1,12 +1,12 @@
-.show {
-  -webkit-animation: scrollEffect 500ms ease-in;
-          animation: scrollEffect 500ms ease-in;
+.slideUp {
+  -webkit-animation: slideUp 500ms ease-in;
+          animation: slideUp 500ms ease-in;
 }
 
-@-webkit-keyframes scrollEffect {
+@-webkit-keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(8rem);
+    transform: translateY(10rem);
   }
   to {
     opacity: 1;
@@ -14,10 +14,36 @@
   }
 }
 
-@keyframes scrollEffect {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(8rem);
+    transform: translateY(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.slideDown {
+  -webkit-animation: slideDown 500ms ease-in;
+          animation: slideDown 500ms ease-in;
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
   }
   to {
     opacity: 1;
@@ -154,6 +180,7 @@ nav {
 }
 nav img {
   width: 6rem;
+  margin-left: 6%;
   cursor: pointer;
 }
 nav img:hover {
@@ -162,6 +189,8 @@ nav img:hover {
 nav ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-right: 6%;
   gap: 3rem;
   list-style: none;
 }
@@ -232,17 +261,15 @@ nav ul li .slideIn {
   place-items: center;
 }
 .hero__container {
+  margin-top: -5rem;
   display: flex;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
   width: 80%;
   height: 50rem;
   justify-content: center;
   align-items: flex-start;
-  border: 1px solid #ff402e;
 }
 .hero__content {
-  margin: 10rem 0 0 2rem;
+  margin: 10rem 0 0 8rem;
   display: flex;
   flex-direction: column;
   row-gap: 1.2rem;
@@ -250,7 +277,6 @@ nav ul li .slideIn {
   font-family: "Syne", sans-serif;
   width: 40rem;
   max-height: 50%;
-  border: 1px solid #ff402e;
 }
 .hero__content h1 {
   color: white;
@@ -314,6 +340,8 @@ nav ul li .slideIn {
 }
 .hero .hero__animation {
   margin: 5rem auto;
+  -webkit-animation: slideDown 1.4s ease-in;
+          animation: slideDown 1.4s ease-in;
   filter: drop-shadow(0.6rem 0.65rem 0.85rem black);
 }
 .hero_down {
@@ -703,6 +731,19 @@ nav ul li .slideIn {
   place-items: center;
 }
 
+.form__container {
+  display: flex;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__image {
+  width: 30rem;
+  filter: drop-shadow(0.6rem 0.65rem 0.85rem rgba(196, 195, 192, 0.3294117647));
+}
+
 .form__form {
   border: 2px solid white;
   padding: 3.5rem;
@@ -785,7 +826,6 @@ nav ul li .slideIn {
 .form__button {
   margin-top: 1.2rem;
   width: 100%;
-  height: 100%;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 0.5rem;

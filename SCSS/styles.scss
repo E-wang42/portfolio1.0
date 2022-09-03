@@ -39,15 +39,30 @@ $Syne: "Syne", sans-serif;
   max-width: 19rem;
 }
 
-// scroll fade-in
-.show {
-  animation: scrollEffect 500ms ease-in;
+// scroll fade-ins
+.slideUp {
+  animation: slideUp 500ms ease-in;
 }
 
-@keyframes scrollEffect {
+@keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(8rem);
+    transform: translateY(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slideDown {
+  animation: slideDown 500ms ease-in;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10rem);
   }
   to {
     opacity: 1;
@@ -148,6 +163,7 @@ nav {
   z-index: 1000;
   img {
     width: 6rem;
+    margin-left: 6%;
     cursor: pointer;
     &:hover {
       filter: drop-shadow(0 0 0.75rem $blue);
@@ -156,6 +172,8 @@ nav {
   ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-right: 6%;
     gap: 3rem;
     list-style: none;
     li {
@@ -218,16 +236,16 @@ nav {
   display: grid;
   place-items: center;
   &__container {
+    margin-top: -5rem;
     display: flex;
-    column-gap: 4rem;
     width: 80%;
     height: 50rem;
     justify-content: center;
     align-items: flex-start;
-    border: 1px solid $redorange;
+    // border: 1px solid $redorange;
   }
   &__content {
-    margin: 10rem 0 0 2rem;
+    margin: 10rem 0 0 8rem;
     display: flex;
     flex-direction: column;
     row-gap: 1.2rem;
@@ -235,7 +253,7 @@ nav {
     font-family: $Syne;
     width: 40rem;
     max-height: 50%;
-    border: 1px solid $redorange;
+    // border: 1px solid $redorange;
     h1 {
       color: white;
       font-size: 2.5rem;
@@ -294,6 +312,7 @@ nav {
 
   .hero__animation {
     margin: 5rem auto;
+    animation: slideDown 1.4s ease-in;
     filter: drop-shadow(0.6rem 0.65rem 0.85rem black);
   }
 
@@ -718,19 +737,17 @@ nav {
   place-items: center;
 }
 
-// .form__container {
-//   background-image: linear-gradient(105deg, $background 50%, transparent),
-//     url("/images/bg1.jpg");
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   width: 75rem;
-//   height: 45rem;
-//
-//   display: flex;
-//   justify-content: start;
-//   align-items: center;
-// }
+.form__container {
+  display: flex;
+  column-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__image {
+  width: 30rem;
+  filter: drop-shadow(0.6rem 0.65rem 0.85rem #c4c3c054);
+}
 
 .form__form {
   border: 2px solid white;
@@ -802,7 +819,6 @@ nav {
 .form__button {
   margin-top: 1.2rem;
   width: 100%;
-  height: 100%;
   background-color: transparent;
   border: 2px solid white;
   border-radius: 0.5rem;
