@@ -453,6 +453,10 @@ nav ul li .slideIn {
 }
 .skills__container .skills__dev--icons img {
   width: 4rem;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg) brightness(103%) contrast(106%);
+}
+.skills__container .skills__dev--icons img:first-of-type {
+  width: 4.8rem;
 }
 .skills__container .skills__design {
   grid-row: 1/span 1;
@@ -470,6 +474,14 @@ nav ul li .slideIn {
 }
 .skills__container .skills__design--icons img {
   width: 4rem;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg) brightness(103%) contrast(106%);
+}
+.skills__container .skills__design--icons img:first-of-type {
+  width: 2.8rem;
+}
+.skills__container .skills__design--icons img:last-of-type {
+  width: 9rem;
+  margin-left: -2.5rem;
 }
 .skills__container .skills__tools {
   grid-row: 2/span 1;
@@ -483,10 +495,14 @@ nav ul li .slideIn {
 }
 .skills__container .skills__tools--icons {
   display: flex;
-  gap: 3rem;
+  gap: 2.2rem;
 }
 .skills__container .skills__tools--icons img {
   width: 4rem;
+  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg) brightness(103%) contrast(106%);
+}
+.skills__container .skills__tools--icons img:nth-of-type(2) {
+  width: 5rem;
 }
 .skills__container .skills__heading {
   display: flex;
