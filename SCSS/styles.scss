@@ -8,6 +8,7 @@ $purple--dark: #3b1a61;
 $blue: #30d5c8;
 $bluegreen: #2dffc4;
 $redorange: #ff402e;
+$offwhite: #c4c3c0;
 
 // -- fonts --
 $Rubik: "Rubik", sans-serif;
@@ -29,13 +30,14 @@ $Syne: "Syne", sans-serif;
   width: 3.2rem;
   justify-self: center;
   align-self: center;
-  filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg)
-    brightness(103%) contrast(106%);
+  // filter: invert(100%) sepia(97%) saturate(0%) hue-rotate(24deg)
+  //   brightness(103%) contrast(106%);
 }
 
 @mixin breakPara {
   line-height: 1.4rem;
-  color: white;
+  color: $grey--dark;
+  font-weight: 500;
   max-width: 19rem;
 }
 
@@ -189,7 +191,9 @@ nav {
         letter-spacing: 0.12rem;
         font-size: 1.2rem;
         span {
-          background-color: $purple;
+          color: black;
+          font-weight: 500;
+          background-color: $blue;
           padding: 0.3rem 0.6rem;
         }
       }
@@ -279,6 +283,10 @@ nav {
       a {
         text-decoration: none;
         background-color: $blue;
+        &:hover {
+          scale: 1.1;
+          transition: 0.3s ease-in-out;
+        }
       }
       span {
         display: flex;
@@ -306,6 +314,7 @@ nav {
       }
     }
   }
+
   #magic {
     color: black;
   }
@@ -363,11 +372,11 @@ nav {
   .break {
     display: flex;
     position: absolute;
-    opacity: 0.85;
+    opacity: 0.65;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: $purple--dark;
+    background-color: $offwhite;
 
     width: 80rem;
     height: 19rem;
@@ -377,7 +386,7 @@ nav {
       flex-direction: column;
       gap: 2rem;
       padding-right: 5rem;
-      border-right: 1px solid rgba(255, 255, 255, 0.459);
+      border-right: 1px solid $grey--dark;
       img {
         @include breakImg();
       }
