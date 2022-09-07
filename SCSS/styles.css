@@ -308,6 +308,9 @@ nav ul li .slideIn {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
+.hero__content--buttons .email_container {
+  overflow: hidden;
+}
 .hero__content--buttons a {
   text-decoration: none;
   background-color: #30d5c8;

@@ -280,6 +280,9 @@ nav {
       margin-top: 4rem;
       animation: moveInButton 0.8s ease-out 0.75s;
       animation-fill-mode: backwards;
+      .email_container {
+        overflow: hidden;
+      }
       a {
         text-decoration: none;
         background-color: $blue;

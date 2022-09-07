@@ -3,6 +3,7 @@ const nav = document.querySelector(".navi") as HTMLElement;
 const logo = document.querySelector(".logo") as HTMLImageElement;
 const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
+const copyEmail = document.querySelector(".email__container") as HTMLDivElement;
 
 //logo scroll
 logo.addEventListener("click", function () {
@@ -57,3 +58,8 @@ function slideUp() {
   });
 }
 slideUp();
+
+copyEmail.addEventListener("click", async function () {
+  await navigator.clipboard.writeText("developeremail@gmail.com");
+  alert("Copied!");
+});
