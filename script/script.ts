@@ -59,7 +59,7 @@ function slideUp() {
 }
 slideUp();
 
-copyEmail.addEventListener("click", async function () {
+copyEmail.addEventListener("click", async () => {
   await navigator.clipboard.writeText("developeremail@gmail.com");
   alert("Copied!");
 });

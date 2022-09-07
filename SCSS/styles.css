@@ -308,8 +308,23 @@ nav ul li .slideIn {
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
 }
-.hero__content--buttons .email_container {
+.hero__content--buttons .email__container {
+  position: relative;
   overflow: hidden;
+}
+.hero__content--buttons .email__container:hover .new {
+  transform: translateX(0);
+}
+.hero__content--buttons .email__container .new {
+  background-color: #30d5c8;
+  color: #212121;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 0.2s;
+  font-weight: bold;
 }
 .hero__content--buttons a {
   text-decoration: none;

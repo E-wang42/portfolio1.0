@@ -280,8 +280,23 @@ nav {
       margin-top: 4rem;
       animation: moveInButton 0.8s ease-out 0.75s;
       animation-fill-mode: backwards;
-      .email_container {
+      .email__container {
+        position: relative;
         overflow: hidden;
+        &:hover .new {
+          transform: translateX(0);
+        }
+        .new {
+          background-color: $blue;
+          color: $grey--dark;
+          display: grid;
+          inset: 0;
+          place-content: center;
+          position: absolute;
+          transform: translateX(-100%);
+          transition: transform 0.2s;
+          font-weight: bold;
+        }
       }
       a {
         text-decoration: none;
