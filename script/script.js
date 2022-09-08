@@ -41,6 +41,7 @@ var logo = document.querySelector(".logo");
 var hero = document.querySelector(".hero");
 var contact = document.querySelector(".forms__section");
 var copyEmail = document.querySelector(".email__container");
+var slideInCopy = document.querySelector(".new");
 //logo scroll
 logo.addEventListener("click", function () {
     main.scrollTo({
@@ -88,13 +89,14 @@ function slideUp() {
     });
 }
 slideUp();
+//clipboard API
 copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: return [4 /*yield*/, navigator.clipboard.writeText("developeremail@gmail.com")];
             case 1:
                 _a.sent();
-                alert("Copied!");
+                slideInCopy.textContent = "Copied!";
                 return [2 /*return*/];
         }
     });

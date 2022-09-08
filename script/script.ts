@@ -4,6 +4,7 @@ const logo = document.querySelector(".logo") as HTMLImageElement;
 const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
 const copyEmail = document.querySelector(".email__container") as HTMLDivElement;
+const slideInCopy = document.querySelector(".new") as HTMLSpanElement;
 
 //logo scroll
 logo.addEventListener("click", function () {
@@ -59,7 +60,8 @@ function slideUp() {
 }
 slideUp();
 
+//clipboard API
 copyEmail.addEventListener("click", async () => {
   await navigator.clipboard.writeText("developeremail@gmail.com");
-  alert("Copied!");
+  slideInCopy.textContent = "Copied!";
 });
