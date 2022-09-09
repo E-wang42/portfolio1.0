@@ -60,7 +60,7 @@ function slideUp() {
 }
 slideUp();
 
-//clipboard API
+//clipboard API//
 copyEmail.addEventListener("click", async () => {
   await navigator.clipboard.writeText("developeremail@gmail.com");
   slideInCopy.textContent = "Copied!";
