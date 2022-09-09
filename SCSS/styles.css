@@ -382,7 +382,7 @@ nav ul li .slideIn {
 
 .break__section {
   position: relative;
-  background: url("/images/svg_bg-top.svg") center/cover;
+  background: url("/images/svg_bg3.svg") center/cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
@@ -545,8 +545,9 @@ nav ul li .slideIn {
 .projects {
   width: 100vw;
   height: 100vh;
-  background-color: #2e343e;
+  background: url("/images/svg_bg-top.svg") center/cover;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
   margin: 0 auto;
   display: grid;
   place-items: center;
@@ -555,7 +556,6 @@ nav ul li .slideIn {
 
 .projects__container {
   position: absolute;
-  background-color: #3b1a61;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -592,7 +592,7 @@ nav ul li .slideIn {
   transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  border: 1px solid #30d5c8;
+  border: 1px solid white;
   text-align: center;
   pointer-events: none;
 }
@@ -696,75 +696,10 @@ nav ul li .slideIn {
   transform: translateZ(8rem) scale(0.96);
 }
 
-.reviews {
-  background: url("/images/svg_bg-bottom.svg") center/cover;
-  box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486), 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
-  background-repeat: no-repeat;
-  position: relative;
-  height: 30rem;
-  width: 100%;
-  display: grid;
-  place-items: center;
-}
-.reviews__container {
-  width: 100%;
-  height: 24rem;
-  display: grid;
-  place-items: center;
-  scroll-behavior: smooth;
-  opacity: 0.8;
-}
-.reviews__container .reviews__arrow {
-  position: absolute;
-  height: 3.5rem;
-  width: 3.5rem;
-  font-size: 2.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0.5;
-  background-color: white;
-  border: none;
-  display: grid;
-  place-items: center;
-}
-.reviews__container .reviews__arrow:hover {
-  opacity: 1;
-  border: none;
-}
-.reviews__container .reviews__wrapper {
-  width: 100%;
-  max-width: 70rem;
-  height: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  background-color: #3b1a61;
-  padding: 0 4rem;
-}
-.reviews__container .reviews__wrapper--card {
-  position: absolute;
-  height: 16rem;
-  width: 30rem;
-  background-color: white;
-  border: 1px solid black;
-  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.308);
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-#arrow-prev {
-  left: 12%;
-}
-
-#arrow-next {
-  right: 12%;
-}
-
 .form__section {
-  background-color: #2e343e;
+  background: url("/images/svg_bg-bottom.svg") center/cover;
+  background-repeat: none;
+  background-blend-mode: multiply;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -886,7 +821,7 @@ nav ul li .slideIn {
 
 footer {
   margin: 0 auto;
-  height: 25rem;
+  height: 20rem;
   background-color: #25272e;
   display: grid;
   align-items: center;
@@ -916,6 +851,7 @@ footer {
 
 .footer__logo {
   width: 12rem;
+  cursor: pointer;
   filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
 }
 .footer__logo:hover {
