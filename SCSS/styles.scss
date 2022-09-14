@@ -387,34 +387,50 @@ nav {
   box-shadow: 0 1.4rem 1.2rem rgba(0, 0, 0, 0.486);
   display: grid;
   place-items: center;
-  height: 30rem;
-  .break {
+  width: 100vw;
+  height: 40rem;
+  .break__container {
+    height: 85%;
+    width: 90rem;
     display: flex;
-    position: absolute;
-    opacity: 0.65;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    background-color: $offwhite;
-
-    width: 80rem;
-    height: 19rem;
-    gap: 5rem;
-    &__wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      padding-right: 5rem;
-      border-right: 1px solid $grey--dark;
-      img {
-        @include breakImg();
-      }
-      p {
-        @include breakPara();
-      }
+    h2 {
+      color: white;
+      border-bottom: 3px solid $blue;
+      font-size: 2rem;
     }
-    &__wrapper:last-child {
-      border: none;
+    .break {
+      display: flex;
+      position: relative;
+      opacity: 0.75;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: $offwhite;
+      width: 90rem;
+      height: 19rem;
+      gap: 5rem;
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-right: 5rem;
+        border-right: 1px solid $grey--dark;
+        &:last-child {
+          padding-right: 0;
+        }
+        img {
+          @include breakImg();
+        }
+        p {
+          @include breakPara();
+        }
+      }
+      &__wrapper:last-child {
+        border: none;
+      }
     }
   }
 }
@@ -555,18 +571,33 @@ nav {
   box-shadow: 0 -1.4rem 1.2rem rgba(0, 0, 0, 0.486);
 }
 
+.projects__figure {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  padding: 2.8rem 0;
+  h2 {
+    color: white;
+    font-size: 2rem;
+    border-bottom: 3px solid $blue;
+  }
+}
+
 .projects__container {
-  position: absolute;
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  // padding: 2rem 5rem;
   place-items: center;
   width: 80%;
   height: 100%;
-  // row-gap: 3rem;
-  // column-gap: 8rem;
   opacity: 0.95;
+  gap: 3rem;
 }
 
 .projects__wrapper {
@@ -776,7 +807,6 @@ nav {
   background: url("/images/svg_bg-bottom.svg") center / cover;
   background-repeat: none;
   background-blend-mode: multiply;
-  // background-color: $background;
   width: 100vw;
   height: 100vh;
   display: grid;
@@ -788,6 +818,7 @@ nav {
   column-gap: 5rem;
   justify-content: center;
   align-items: center;
+  margin-top: 6rem;
 }
 
 .form__form {
@@ -883,13 +914,12 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  // gap: 5rem;
   height: 40rem;
   padding: 4rem 0;
   &--title {
     color: white;
     border-bottom: 3px solid $blue;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
   &--image {
     width: 30rem;
