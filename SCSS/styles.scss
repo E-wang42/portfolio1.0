@@ -139,7 +139,7 @@ main {
     width: 0.6vw;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $grey--dark;
+    background-color: $grey--darker;
     border-radius: 1rem;
   }
   &::-webkit-scrollbar-thumb:hover {
@@ -790,11 +790,6 @@ nav {
   align-items: center;
 }
 
-.contact__image {
-  width: 30rem;
-  filter: drop-shadow(0.6rem 0.65rem 0.85rem #c4c3c054);
-}
-
 .form__form {
   border: 2px solid white;
   padding: 3.5rem;
@@ -883,6 +878,24 @@ nav {
   }
 }
 
+.contact__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  // gap: 5rem;
+  height: 40rem;
+  padding: 4rem 0;
+  &--title {
+    color: white;
+    border-bottom: 3px solid $blue;
+    font-size: 2.5rem;
+  }
+  &--image {
+    width: 30rem;
+    filter: drop-shadow(0.6rem 0.65rem 0.85rem #c4c3c054);
+  }
+}
 // FOOTER ---------------------------
 footer {
   margin: 0 auto;

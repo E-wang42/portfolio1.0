@@ -155,7 +155,7 @@ main::-webkit-scrollbar {
   width: 0.6vw;
 }
 main::-webkit-scrollbar-thumb {
-  background-color: #212121;
+  background-color: #181818;
   border-radius: 1rem;
 }
 main::-webkit-scrollbar-thumb:hover {
@@ -715,11 +715,6 @@ nav ul li .slideIn {
   align-items: center;
 }
 
-.contact__image {
-  width: 30rem;
-  filter: drop-shadow(0.6rem 0.65rem 0.85rem rgba(196, 195, 192, 0.3294117647));
-}
-
 .form__form {
   border: 2px solid white;
   padding: 3.5rem;
@@ -818,6 +813,24 @@ nav ul li .slideIn {
   background-color: #30d5c8;
   font-weight: bold;
   transition: 0.2s ease-in-out;
+}
+
+.contact__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 40rem;
+  padding: 4rem 0;
+}
+.contact__left--title {
+  color: white;
+  border-bottom: 3px solid #30d5c8;
+  font-size: 2.5rem;
+}
+.contact__left--image {
+  width: 30rem;
+  filter: drop-shadow(0.6rem 0.65rem 0.85rem rgba(196, 195, 192, 0.3294117647));
 }
 
 footer {
