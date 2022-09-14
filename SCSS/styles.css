@@ -867,4 +867,13 @@ footer {
 .footer__contact span {
   padding-bottom: 2rem;
   color: white;
+}
+
+.footer__strip {
+  background-color: #30d5c8;
+  color: #212121;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */
