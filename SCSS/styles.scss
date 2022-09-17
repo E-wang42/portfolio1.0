@@ -400,6 +400,7 @@ nav {
       color: white;
       border-bottom: 3px solid $blue;
       font-size: 2rem;
+      letter-spacing: 0.1rem;
     }
     .break {
       display: flex;
@@ -585,6 +586,7 @@ nav {
     color: white;
     font-size: 2rem;
     border-bottom: 3px solid $blue;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -920,6 +922,7 @@ nav {
     color: white;
     border-bottom: 3px solid $blue;
     font-size: 2.2rem;
+    letter-spacing: 0.1rem;
   }
   &--image {
     width: 30rem;

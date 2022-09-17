@@ -404,6 +404,7 @@ nav ul li .slideIn {
   color: white;
   border-bottom: 3px solid #30d5c8;
   font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 .break__section .break__container .break {
   display: flex;
@@ -587,6 +588,7 @@ nav ul li .slideIn {
   color: white;
   font-size: 2rem;
   border-bottom: 3px solid #30d5c8;
+  letter-spacing: 0.1rem;
 }
 
 .projects__container {
@@ -863,6 +865,7 @@ nav ul li .slideIn {
   color: white;
   border-bottom: 3px solid #30d5c8;
   font-size: 2.2rem;
+  letter-spacing: 0.1rem;
 }
 .contact__left--image {
   width: 30rem;
