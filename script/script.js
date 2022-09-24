@@ -102,43 +102,36 @@ copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0
     });
 }); });
 //forms default page
-var form = document.getElementById("contact__form");
-function handleSubmit(event) {
-    return __awaiter(this, void 0, void 0, function () {
-        var status, data;
-        return __generator(this, function (_a) {
-            event.preventDefault();
-            status = document.getElementById("my-form-status");
-            data = new FormData(event.target);
-            fetch(event.target.action, {
-                method: form.method,
-                body: data,
-                headers: {
-                    Accept: "application/json"
-                }
-            })
-                .then(function (response) {
-                if (response.ok) {
-                    status.innerHTML = "Thanks for your submission!";
-                    form.reset();
-                }
-                else {
-                    response.json().then(function (data) {
-                        if (Object.hasOwn(data, "errors")) {
-                            status.innerHTML = data["errors"]
-                                .map(function (error) { return error["message"]; })
-                                .join(", ");
-                        }
-                        else {
-                            status.innerHTML = "Oops! There was a problem submitting your form";
-                        }
-                    });
-                }
-            })["catch"](function (error) {
-                status.innerHTML = "Oops! There was a problem submitting your form";
-            });
-            return [2 /*return*/];
-        });
-    });
-}
-form.addEventListener("submit", handleSubmit);
+// var form = document.getElementById("contact__form");
+// async function handleSubmit(event) {
+//   event.preventDefault();
+//   var status = document.getElementById("my-form-status");
+//   var data = new FormData(event.target);
+//   fetch(event.target.action, {
+//     method: form.method,
+//     body: data,
+//     headers: {
+//       Accept: "application/json",
+//     },
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         status.innerHTML = "Thanks for your submission!";
+//         form.reset();
+//       } else {
+//         response.json().then((data) => {
+//           if (Object.hasOwn(data, "errors")) {
+//             status.innerHTML = data["errors"]
+//               .map((error) => error["message"])
+//               .join(", ");
+//           } else {
+//             status.innerHTML = "Oops! There was a problem submitting your form";
+//           }
+//         });
+//       }
+//     })
+//     .catch((error) => {
+//       status.innerHTML = "Oops! There was a problem submitting your form";
+//     });
+// }
+// form.addEventListener("submit", handleSubmit);
