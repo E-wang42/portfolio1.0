@@ -723,11 +723,16 @@ nav ul li .slideIn {
   border: 1px solid white;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  text-align: center;
+}
+.back__buttons--wrapper a i {
+  padding-left: 0.5rem;
 }
 .back__buttons--wrapper a:hover {
   background-color: #30d5c8;
   color: black;
   transition: 0.2s ease-in-out;
+  font-weight: 500;
 }
 
 .card-content {

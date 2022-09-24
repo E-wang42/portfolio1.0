@@ -718,10 +718,15 @@ nav {
     border: 1px solid white;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    text-align: center;
+    i {
+      padding-left: 0.5rem;
+    }
     &:hover {
       background-color: $blue;
       color: black;
       transition: 0.2s ease-in-out;
+      font-weight: 500;
     }
   }
 }
