@@ -956,9 +956,15 @@ footer {
   list-style: none;
   li {
     padding-bottom: 2rem;
+    text-transform: capitalize;
     a {
+      font-size: 1.3rem;
       text-decoration: none;
       color: white;
+      &:hover {
+        color: $blue;
+        transition: 300ms;
+      }
     }
   }
 }
@@ -968,15 +974,30 @@ footer {
   cursor: pointer;
   filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
   &:hover {
+    transition: 300ms;
     filter: drop-shadow(0 0 0.75rem $blue);
   }
 }
 
 .footer__contact {
   @include footerFlex();
-  span {
-    padding-bottom: 2rem;
-    color: white;
+  li {
+    list-style: none;
+    a {
+      font-size: 1.3rem;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 0.5rem;
+      padding-bottom: 2rem;
+      color: white;
+      text-transform: capitalize;
+      &:hover {
+        color: $blue;
+        transition: 300ms;
+      }
+    }
   }
 }
 

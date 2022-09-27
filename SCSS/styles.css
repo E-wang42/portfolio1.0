@@ -903,10 +903,16 @@ footer {
 }
 .footer__ul li {
   padding-bottom: 2rem;
+  text-transform: capitalize;
 }
 .footer__ul li a {
+  font-size: 1.3rem;
   text-decoration: none;
   color: white;
+}
+.footer__ul li a:hover {
+  color: #30d5c8;
+  transition: 300ms;
 }
 
 .footer__logo {
@@ -915,6 +921,7 @@ footer {
   filter: drop-shadow(0.6rem 0.65rem 0.75rem black);
 }
 .footer__logo:hover {
+  transition: 300ms;
   filter: drop-shadow(0 0 0.75rem #30d5c8);
 }
 
@@ -924,9 +931,24 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.footer__contact span {
+.footer__contact li {
+  list-style: none;
+}
+.footer__contact li a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
   padding-bottom: 2rem;
   color: white;
+  text-transform: capitalize;
+}
+.footer__contact li a:hover {
+  color: #30d5c8;
+  transition: 300ms;
 }
 
 .footer__strip {
