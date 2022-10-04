@@ -101,3 +101,20 @@ copyEmail.addEventListener("click", async () => {
 //     });
 // }
 // form.addEventListener("submit", handleSubmit);
+
+function responsiveNav() {
+  const burgerMenu = document.querySelector(
+    ".burgermenu__container"
+  ) as HTMLDivElement;
+  const navItems = document.querySelector(".nav__links") as HTMLUListElement;
+  const clickedItem = document.querySelectorAll(".nav__link--item");
+
+  burgerMenu.addEventListener("click", () => {
+    navItems.classList.toggle("active");
+  });
+
+  clickedItem.addEventListener("click", () => {
+    navItems.remove();
+  });
+}
+responsiveNav();
