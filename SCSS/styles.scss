@@ -41,7 +41,7 @@ $Syne: "Syne", sans-serif;
   max-width: 19rem;
 }
 
-// animations
+// -- animations --
 @keyframes slidein {
   from {
     transform: translateY(-100%);
@@ -282,7 +282,6 @@ nav {
     height: 50rem;
     justify-content: center;
     align-items: flex-start;
-    // border: 1px solid $redorange;
   }
   &__content {
     margin: 10rem 0 0 8rem;
@@ -293,7 +292,6 @@ nav {
     font-family: $Syne;
     width: 40rem;
     max-height: 50%;
-    // border: 1px solid $redorange;
     h1 {
       color: white;
       font-size: 2.5rem;
@@ -382,7 +380,6 @@ nav {
     bottom: 1rem;
     position: absolute;
     text-align: center;
-    // padding-bottom: 4.5rem;
     a {
       color: $grey;
       :hover {
@@ -1043,7 +1040,6 @@ footer {
     height: 100vh;
     background-color: $background;
     padding: 5rem 0;
-    // margin-top: 2rem;
     flex-direction: column;
     row-gap: 4rem;
     z-index: 1000;
