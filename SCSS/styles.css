@@ -688,6 +688,12 @@ nav ul li .slideIn {
   align-items: center;
   transform: rotateY(0deg);
 }
+.projects__wrapper--card h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: -1.8rem;
+}
 
 .projectImage img {
   width: 100%;

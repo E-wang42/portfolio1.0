@@ -62,12 +62,12 @@ slideUp();
 
 //clipboard API
 copyEmail.addEventListener("click", async () => {
-  await navigator.clipboard.writeText("developeremail@gmail.com");
+  await navigator.clipboard.writeText("ericwang42@outlook.com");
   slideInCopy.textContent = "Copied!";
 });
 
 //forms default page
-// var form = document.getElementById("contact__form");
+// var form = document.getElementById("form__form");
 
 // async function handleSubmit(event) {
 //   event.preventDefault();
@@ -107,14 +107,9 @@ function responsiveNav() {
     ".burgermenu__container"
   ) as HTMLDivElement;
   const navItems = document.querySelector(".nav__links") as HTMLUListElement;
-  const clickedItem = document.querySelectorAll(".nav__link--item");
 
   burgerMenu.addEventListener("click", () => {
     navItems.classList.toggle("active");
-  });
-
-  clickedItem.addEventListener("click", () => {
-    navItems.remove();
   });
 }
 responsiveNav();

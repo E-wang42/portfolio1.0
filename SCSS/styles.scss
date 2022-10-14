@@ -652,6 +652,12 @@ nav {
   justify-content: space-between;
   align-items: center;
   transform: rotateY(0deg);
+  h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: -1.8rem;
+  }
 }
 
 .projectImage img {

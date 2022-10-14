@@ -138,12 +138,8 @@ copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0
 function responsiveNav() {
     var burgerMenu = document.querySelector(".burgermenu__container");
     var navItems = document.querySelector(".nav__links");
-    var clickedItem = document.querySelectorAll(".nav__link--item");
     burgerMenu.addEventListener("click", function () {
         navItems.classList.toggle("active");
-    });
-    clickedItem.addEventListener("click", function () {
-        navItems.remove();
     });
 }
 responsiveNav();
