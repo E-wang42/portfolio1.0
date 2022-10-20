@@ -42,11 +42,14 @@ var hero = document.querySelector(".hero");
 var contact = document.querySelector(".forms__section");
 var copyEmail = document.querySelector(".email__container");
 var slideInCopy = document.querySelector(".new");
+var logoSmall = document.querySelector(".logosm");
 //logo scroll
-logo.addEventListener("click", function () {
-    main.scrollTo({
-        top: 0,
-        behavior: "smooth"
+[logo, logoSmall].forEach(function (item) {
+    return item.addEventListener("click", function () {
+        main.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });
 //nav fade-in
@@ -93,7 +96,7 @@ slideUp();
 copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, navigator.clipboard.writeText("developeremail@gmail.com")];
+            case 0: return [4 /*yield*/, navigator.clipboard.writeText("ericwang42@outlook.com")];
             case 1:
                 _a.sent();
                 slideInCopy.textContent = "Copied!";
@@ -102,7 +105,7 @@ copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0
     });
 }); });
 //forms default page
-// var form = document.getElementById("contact__form");
+// var form = document.getElementById("form__form");
 // async function handleSubmit(event) {
 //   event.preventDefault();
 //   var status = document.getElementById("my-form-status");

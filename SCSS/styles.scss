@@ -187,6 +187,7 @@ nav {
     align-items: center;
     margin-right: 6%;
     gap: 3rem;
+    width: 100vw;
     list-style: none;
     li {
       position: relative;
@@ -220,33 +221,6 @@ nav {
   }
 }
 
-.burgermenu {
-  display: none;
-  top: 1rem;
-  right: 1.2rem;
-  position: absolute;
-  width: 2.2rem;
-  height: 2.2rem;
-  z-index: 100;
-  background-color: $blue;
-  &__container {
-    width: 1.8rem;
-    height: 1.2rem;
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    &--burger {
-      width: 100%;
-      height: 0.2rem;
-      background-color: black;
-      border-radius: 0.05rem;
-    }
-  }
-}
-
 .sticky {
   top: 0;
   width: 100vw;
@@ -256,6 +230,10 @@ nav {
   animation: navFade 0.8s;
   transition: 0.5s ease-in;
   box-shadow: 0 0.75rem 0.5rem rgba(0, 0, 0, 0.288);
+}
+
+.logosm {
+  display: none;
 }
 
 @keyframes navFade {
@@ -1031,28 +1009,59 @@ footer {
 
 @media (max-width: 600px) {
   //  -- Nav --
-  nav {
-    flex-direction: column;
+
+  .logo {
+    display: none;
+  }
+  .logosm {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 6rem;
+    cursor: pointer;
+    &:hover {
+      filter: drop-shadow(0 0 0.75rem $blue);
+    }
   }
 
-  .burgermenu {
-    display: grid;
-    place-items: center;
-  }
-
-  .nav__links {
-    // display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: $background;
-    padding: 5rem 0;
-    flex-direction: column;
-    row-gap: 4rem;
-    z-index: 1000;
-  }
-
-  .active {
+  .navi {
+    margin: 0 auto;
+    padding: 0;
     display: flex;
-    animation: slidein 400ms ease-in;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    .nav__links {
+      gap: 0;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      li {
+        margin: 0 0.8rem;
+      }
+    }
   }
+
+  // .burgermenu {
+  //   display: grid;
+  //   place-items: center;
+  // }
+
+  // .nav__links {
+  //   // display: none;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   background-color: $background;
+  //   padding: 5rem 0;
+  //   flex-direction: column;
+  //   row-gap: 4rem;
+  //   z-index: 1000;
+  // }
+
+  // .active {
+  //   display: flex;
+  //   animation: slidein 400ms ease-in;
+  // }
 }

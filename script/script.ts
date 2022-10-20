@@ -5,14 +5,18 @@ const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
 const copyEmail = document.querySelector(".email__container") as HTMLDivElement;
 const slideInCopy = document.querySelector(".new") as HTMLSpanElement;
+const logoSmall = document.querySelector(".logosm") as HTMLImageElement;
 
 //logo scroll
-logo.addEventListener("click", function () {
-  main.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+
+[logo, logoSmall].forEach((item) =>
+  item.addEventListener("click", function () {
+    main.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  })
+);
 
 //nav fade-in
 const stickyNav = function (entries: any) {
