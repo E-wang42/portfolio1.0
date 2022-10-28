@@ -187,8 +187,9 @@ nav {
     align-items: center;
     margin-right: 6%;
     gap: 3rem;
-    width: 100vw;
+    width: 32rem;
     list-style: none;
+
     li {
       position: relative;
       padding-bottom: 0.2rem;
@@ -930,6 +931,11 @@ nav {
     filter: drop-shadow(0.6rem 0.65rem 0.85rem #c4c3c054);
   }
 }
+
+#my-form-status {
+  display: inline-block;
+}
+
 // FOOTER ---------------------------
 footer {
   margin: 0 auto;
@@ -1043,25 +1049,4 @@ footer {
       }
     }
   }
-
-  // .burgermenu {
-  //   display: grid;
-  //   place-items: center;
-  // }
-
-  // .nav__links {
-  //   // display: none;
-  //   width: 100vw;
-  //   height: 100vh;
-  //   background-color: $background;
-  //   padding: 5rem 0;
-  //   flex-direction: column;
-  //   row-gap: 4rem;
-  //   z-index: 1000;
-  // }
-
-  // .active {
-  //   display: flex;
-  //   animation: slidein 400ms ease-in;
-  // }
 }

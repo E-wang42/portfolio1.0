@@ -209,7 +209,7 @@ nav ul {
   align-items: center;
   margin-right: 6%;
   gap: 3rem;
-  width: 100vw;
+  width: 32rem;
   list-style: none;
 }
 nav ul li {
@@ -904,6 +904,10 @@ nav ul li .slideIn {
 .contact__left--image {
   width: 30rem;
   filter: drop-shadow(0.6rem 0.65rem 0.85rem rgba(196, 195, 192, 0.3294117647));
+}
+
+#my-form-status {
+  display: inline-block;
 }
 
 footer {
