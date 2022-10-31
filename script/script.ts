@@ -1,15 +1,18 @@
 const main = document.querySelector(".main") as HTMLElement;
 const nav = document.querySelector(".navi") as HTMLElement;
 const logo = document.querySelector(".logo") as HTMLImageElement;
+const logoSmall = document.querySelector(".logosm") as HTMLImageElement;
+const footerLogo = document.querySelector(".footer__logo") as HTMLImageElement;
 const hero = document.querySelector(".hero") as HTMLHeadingElement;
 const contact = document.querySelector(".forms__section") as HTMLElement;
 const copyEmail = document.querySelector(".email__container") as HTMLDivElement;
 const slideInCopy = document.querySelector(".new") as HTMLSpanElement;
-const logoSmall = document.querySelector(".logosm") as HTMLImageElement;
+const portHome = document.getElementById(
+  "projects__home__button"
+) as HTMLElement;
 
 //logo scroll
-
-[logo, logoSmall].forEach((item) =>
+[portHome, logo, logoSmall, footerLogo].forEach((item) =>
   item.addEventListener("click", function () {
     main.scrollTo({
       top: 0,
@@ -69,42 +72,6 @@ copyEmail.addEventListener("click", async () => {
   await navigator.clipboard.writeText("ericwang42@outlook.com");
   slideInCopy.textContent = "Copied!";
 });
-
-//forms default page
-// var form = document.getElementById("form__form");
-
-// async function handleSubmit(event) {
-//   event.preventDefault();
-//   var status = document.getElementById("my-form-status");
-//   var data = new FormData(event.target);
-//   fetch(event.target.action, {
-//     method: form.method,
-//     body: data,
-//     headers: {
-//       Accept: "application/json",
-//     },
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         status.innerHTML = "Thanks for your submission!";
-//         form.reset();
-//       } else {
-//         response.json().then((data) => {
-//           if (Object.hasOwn(data, "errors")) {
-//             status.innerHTML = data["errors"]
-//               .map((error) => error["message"])
-//               .join(", ");
-//           } else {
-//             status.innerHTML = "Oops! There was a problem submitting your form";
-//           }
-//         });
-//       }
-//     })
-//     .catch((error) => {
-//       status.innerHTML = "Oops! There was a problem submitting your form";
-//     });
-// }
-// form.addEventListener("submit", handleSubmit);
 
 function responsiveNav() {
   const burgerMenu = document.querySelector(

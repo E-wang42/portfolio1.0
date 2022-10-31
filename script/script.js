@@ -38,13 +38,15 @@ var _this = this;
 var main = document.querySelector(".main");
 var nav = document.querySelector(".navi");
 var logo = document.querySelector(".logo");
+var logoSmall = document.querySelector(".logosm");
+var footerLogo = document.querySelector(".footer__logo");
 var hero = document.querySelector(".hero");
 var contact = document.querySelector(".forms__section");
 var copyEmail = document.querySelector(".email__container");
 var slideInCopy = document.querySelector(".new");
-var logoSmall = document.querySelector(".logosm");
+var portHome = document.getElementById("projects__home__button");
 //logo scroll
-[logo, logoSmall].forEach(function (item) {
+[portHome, logo, logoSmall, footerLogo].forEach(function (item) {
     return item.addEventListener("click", function () {
         main.scrollTo({
             top: 0,
@@ -104,40 +106,6 @@ copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0
         }
     });
 }); });
-//forms default page
-// var form = document.getElementById("form__form");
-// async function handleSubmit(event) {
-//   event.preventDefault();
-//   var status = document.getElementById("my-form-status");
-//   var data = new FormData(event.target);
-//   fetch(event.target.action, {
-//     method: form.method,
-//     body: data,
-//     headers: {
-//       Accept: "application/json",
-//     },
-//   })
-//     .then((response) => {
-//       if (response.ok) {
-//         status.innerHTML = "Thanks for your submission!";
-//         form.reset();
-//       } else {
-//         response.json().then((data) => {
-//           if (Object.hasOwn(data, "errors")) {
-//             status.innerHTML = data["errors"]
-//               .map((error) => error["message"])
-//               .join(", ");
-//           } else {
-//             status.innerHTML = "Oops! There was a problem submitting your form";
-//           }
-//         });
-//       }
-//     })
-//     .catch((error) => {
-//       status.innerHTML = "Oops! There was a problem submitting your form";
-//     });
-// }
-// form.addEventListener("submit", handleSubmit);
 function responsiveNav() {
     var burgerMenu = document.querySelector(".burgermenu__container");
     var navItems = document.querySelector(".nav__links");
