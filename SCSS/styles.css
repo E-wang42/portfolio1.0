@@ -776,12 +776,13 @@ nav ul li .slideIn {
   height: 100vh;
   display: grid;
   place-items: center;
+  padding-block: 8rem;
 }
 
 .form__container {
   display: flex;
-  -moz-column-gap: 5rem;
-       column-gap: 5rem;
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
   justify-content: center;
   align-items: center;
   margin-top: 6rem;

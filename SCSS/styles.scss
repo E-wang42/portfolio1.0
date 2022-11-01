@@ -816,11 +816,12 @@ nav {
   height: 100vh;
   display: grid;
   place-items: center;
+  padding-block: 8rem;
 }
 
 .form__container {
   display: flex;
-  column-gap: 5rem;
+  column-gap: 12rem;
   justify-content: center;
   align-items: center;
   margin-top: 6rem;
