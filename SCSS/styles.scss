@@ -1089,4 +1089,12 @@ footer {
       }
     }
   }
+
+  .skills {
+    height: 150vh;
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

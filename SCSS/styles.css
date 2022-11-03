@@ -1059,4 +1059,11 @@ footer {
     border: none;
     opacity: 1;
   }
+  .skills {
+    height: 150vh;
+  }
+  .skills__container {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
