@@ -1060,9 +1060,16 @@ footer {
     opacity: 1;
   }
   .skills {
-    height: 150vh;
+    height: auto;
   }
   .skills__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .projects {
+    height: auto;
+  }
+  .projects__container {
     display: flex;
     flex-direction: column;
   }

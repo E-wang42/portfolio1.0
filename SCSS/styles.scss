@@ -1090,8 +1090,19 @@ footer {
     }
   }
 
+  // -- skills --
+
   .skills {
-    height: 150vh;
+    height: auto;
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // -- projects --
+  .projects {
+    height: auto;
     &__container {
       display: flex;
       flex-direction: column;
