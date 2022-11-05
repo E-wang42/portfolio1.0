@@ -1073,4 +1073,10 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .form__section {
+    height: auto;
+  }
+  .form__section .form__container {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=styles.css.map */
