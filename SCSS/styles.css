@@ -238,7 +238,7 @@ nav ul li .slideIn {
   right: 0;
   bottom: 0;
   width: 0;
-  border-bottom: 2px solid #30d5c8;
+  border-bottom: 4px solid #30d5c8;
   transition: width 0.3s;
 }
 
@@ -383,6 +383,24 @@ nav ul li .slideIn {
 }
 .hero #magic {
   color: black;
+}
+.hero .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 12%;
+  pointer-events: none;
+}
+.hero .bg-video video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .hero .hero__animation {
   margin: 5rem auto;
@@ -992,7 +1010,7 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 320px) {
   .logo {
     display: none;
   }
