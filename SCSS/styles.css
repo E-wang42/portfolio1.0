@@ -140,24 +140,24 @@
 }
 @-webkit-keyframes wave {
   0% {
-    transform: rotate(-45deg);
+    transform: rotate(-10deg);
   }
   50% {
     transform: rotate(45deg);
   }
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(-10deg);
   }
 }
 @keyframes wave {
   0% {
-    transform: rotate(-45deg);
+    transform: rotate(-10deg);
   }
   50% {
     transform: rotate(45deg);
   }
   100% {
-    transform: rotate(-45deg);
+    transform: rotate(-10deg);
   }
 }
 *,
