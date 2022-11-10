@@ -138,6 +138,28 @@
     transform: translate(0);
   }
 }
+@-webkit-keyframes wave {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
 *,
 *::before,
 *::after {
@@ -301,6 +323,11 @@ nav ul li .slideIn {
   font-family: "Syne", sans-serif;
   width: 40rem;
   max-height: 50%;
+}
+.hero__content #hand {
+  display: inline-block;
+  -webkit-animation: wave ease-in-out infinite 1.8s;
+          animation: wave ease-in-out infinite 1.8s;
 }
 .hero__content h1 {
   color: white;

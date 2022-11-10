@@ -120,6 +120,18 @@ $Syne: "Syne", sans-serif;
   }
 }
 
+@keyframes wave {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
 // MAIN ---------------
 *,
 *::before,
@@ -272,6 +284,10 @@ nav {
     font-family: $Syne;
     width: 40rem;
     max-height: 50%;
+    #hand {
+      display: inline-block;
+      animation: wave ease-in-out infinite 1.8s;
+    }
     h1 {
       color: white;
       font-size: 2.5rem;
