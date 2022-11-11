@@ -1037,7 +1037,7 @@ footer {
   align-items: center;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .logo {
     display: none;
   }
