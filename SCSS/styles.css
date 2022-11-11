@@ -236,7 +236,7 @@ nav ul {
 }
 nav ul li {
   position: relative;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.4rem;
 }
 nav ul li:hover .slideIn {
   width: 100%;
@@ -245,14 +245,14 @@ nav ul li a {
   text-decoration: none;
   color: white;
   text-transform: capitalize;
-  letter-spacing: 0.12rem;
+  letter-spacing: 0.11rem;
   font-size: 1.2rem;
 }
 nav ul li a span {
   color: black;
   font-weight: 500;
   background-color: #30d5c8;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.5rem;
 }
 nav ul li .slideIn {
   position: absolute;
@@ -360,6 +360,9 @@ nav ul li .slideIn {
 .hero__content--buttons .email__container {
   position: relative;
   overflow: hidden;
+}
+.hero__content--buttons .email__container .old {
+  width: 100%;
 }
 .hero__content--buttons .email__container:hover .new {
   transform: translateX(0);

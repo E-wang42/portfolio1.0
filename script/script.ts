@@ -72,15 +72,3 @@ copyEmail.addEventListener("click", async () => {
   await navigator.clipboard.writeText("ericwang42@outlook.com");
   slideInCopy.textContent = "Copied!";
 });
-
-function responsiveNav() {
-  const burgerMenu = document.querySelector(
-    ".burgermenu__container"
-  ) as HTMLDivElement;
-  const navItems = document.querySelector(".nav__links") as HTMLUListElement;
-
-  burgerMenu.addEventListener("click", () => {
-    navItems.classList.toggle("active");
-  });
-}
-responsiveNav();

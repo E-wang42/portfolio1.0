@@ -202,10 +202,9 @@ nav {
     gap: 3rem;
     width: 32rem;
     list-style: none;
-
     li {
       position: relative;
-      padding-bottom: 0.2rem;
+      padding-bottom: 0.4rem;
       &:hover .slideIn {
         width: 100%;
       }
@@ -213,13 +212,13 @@ nav {
         text-decoration: none;
         color: white;
         text-transform: capitalize;
-        letter-spacing: 0.12rem;
+        letter-spacing: 0.11rem;
         font-size: 1.2rem;
         span {
           color: black;
           font-weight: 500;
           background-color: $blue;
-          padding: 0.3rem 0.6rem;
+          padding: 0.3rem 0.5rem;
         }
       }
       .slideIn {
@@ -313,6 +312,9 @@ nav {
       .email__container {
         position: relative;
         overflow: hidden;
+        .old {
+          width: 100%;
+        }
         &:hover .new {
           transform: translateX(0);
         }
