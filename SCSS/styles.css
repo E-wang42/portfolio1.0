@@ -717,24 +717,28 @@ nav ul li .slideIn {
   color: white;
   font-size: 1.4rem;
   margin-top: 1rem;
-  margin-bottom: -1.8rem;
 }
 
-.projectImage img {
-  width: 100%;
+.projectImage {
+  width: 90%;
   height: 13rem;
+  margin-top: 1.4rem;
+  margin-bottom: 1.8rem;
+}
+.projectImage img {
+  height: 13rem;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  margin-top: 1.4rem;
-  width: 90%;
   border: 1px solid white;
 }
 
 .tech-stack {
   margin-bottom: 5rem;
   display: flex;
+  flex-wrap: wrap;
   row-gap: 1.2rem;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -750,10 +754,13 @@ nav ul li .slideIn {
   font-weight: 350;
   background-color: white;
   text-align: center;
-  width: 5.2rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   background-color: transparent;
   border: 1px solid white;
+}
+.tech-stack .techName {
+  font-size: 0.65rem;
+  padding: 0.55rem;
 }
 
 .projects__back {
