@@ -106,11 +106,3 @@ copyEmail.addEventListener("click", function () { return __awaiter(_this, void 0
         }
     });
 }); });
-function responsiveNav() {
-    var burgerMenu = document.querySelector(".burgermenu__container");
-    var navItems = document.querySelector(".nav__links");
-    burgerMenu.addEventListener("click", function () {
-        navItems.classList.toggle("active");
-    });
-}
-responsiveNav();
