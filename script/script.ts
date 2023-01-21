@@ -24,7 +24,7 @@ const portHome = document.getElementById(
 //nav fade-in
 const stickyNav = function (entries: any) {
   const [entry] = entries;
-  console.log(entry); //debugger
+  // console.log(entry); //debug
   if (!entry.isIntersecting) {
     nav.classList.add("sticky");
   } else {
@@ -47,7 +47,7 @@ function slideUp() {
 
   const revealSection = function (entries: any, observer: any) {
     const [entry] = entries;
-    console.log(entry); //debugger
+    // console.log(entry); //debug
 
     if (!entry.isIntersecting) {
       return;
