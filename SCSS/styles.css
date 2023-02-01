@@ -716,7 +716,7 @@ nav ul li .slideIn {
 .projects__wrapper--card h3 {
   color: white;
   font-size: 1.4rem;
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
 .projectImage {
@@ -985,7 +985,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   list-style: none;
 }
 .footer__ul li {
@@ -993,7 +993,7 @@ footer {
   text-transform: capitalize;
 }
 .footer__ul li a {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: white;
 }
@@ -1016,13 +1016,13 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 .footer__contact li {
   list-style: none;
 }
 .footer__contact li a {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
   display: flex;
   justify-content: center;
