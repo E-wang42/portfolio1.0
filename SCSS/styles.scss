@@ -139,6 +139,7 @@ $Syne: "Syne", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  // outline: 2px solid $redorange;
 }
 
 html {
@@ -277,11 +278,12 @@ nav {
   &__content {
     margin: 10rem 0 0 8rem;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     row-gap: 1.2rem;
     justify-content: center;
     font-family: $Syne;
-    width: 40rem;
+    max-width: 40rem;
     max-height: 50%;
     #hand {
       display: inline-block;
@@ -309,6 +311,7 @@ nav {
       margin-top: 4rem;
       animation: moveInButton 0.8s ease-out 0.75s;
       animation-fill-mode: backwards;
+      flex-wrap: wrap;
       .email__container {
         position: relative;
         overflow: hidden;
@@ -1056,7 +1059,7 @@ footer {
 
 // Media Queries -------------
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   //  -- Nav --
   .logo {
     display: none;
@@ -1101,6 +1104,27 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
+      .hero__content {
+        margin-left: 0;
+      }
+    }
+    h1 {
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+    p {
+      font-size: medium;
+    }
+    .work {
+      width: 100%;
+    }
+    .email__container {
+      width: 100%;
+    }
+    .hero__span {
+      justify-content: flex-start;
     }
   }
   .hero_down {

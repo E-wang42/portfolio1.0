@@ -317,11 +317,12 @@ nav ul li .slideIn {
 .hero__content {
   margin: 10rem 0 0 8rem;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   row-gap: 1.2rem;
   justify-content: center;
   font-family: "Syne", sans-serif;
-  width: 40rem;
+  max-width: 40rem;
   max-height: 50%;
 }
 .hero__content #hand {
@@ -356,6 +357,7 @@ nav ul li .slideIn {
           animation: moveInButton 0.8s ease-out 0.75s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+  flex-wrap: wrap;
 }
 .hero__content--buttons .email__container {
   position: relative;
@@ -1047,7 +1049,7 @@ footer {
   align-items: center;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .logo {
     display: none;
   }
@@ -1088,6 +1090,27 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .hero__container .hero__content {
+    margin-left: 0;
+  }
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+  .hero h3 {
+    font-size: 1.1rem;
+  }
+  .hero p {
+    font-size: medium;
+  }
+  .hero .work {
+    width: 100%;
+  }
+  .hero .email__container {
+    width: 100%;
+  }
+  .hero .hero__span {
+    justify-content: flex-start;
   }
   .hero_down {
     display: none;
