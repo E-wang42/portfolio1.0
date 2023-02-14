@@ -1176,8 +1176,26 @@ footer {
   // --form --
   .form__section {
     height: auto;
+
     .form__container {
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .contact__left--image {
+        max-width: 18rem;
+      }
+      .form__form {
+        max-width: 20rem;
+        .form__input {
+          width: 13.5rem;
+        }
+        .form__button {
+          white-space: nowrap;
+          margin-top: 1.2rem;
+          font-size: 1rem;
+          text-indent: 0;
+        }
+      }
     }
   }
 }
