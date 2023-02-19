@@ -263,8 +263,8 @@ nav {
 .hero {
   background-color: $background;
   margin: 0 auto;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  // width: 100vw;
   display: grid;
   place-items: center;
   &__container {
@@ -278,7 +278,7 @@ nav {
   &__content {
     margin: 10rem 0 0 8rem;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     flex-direction: column;
     row-gap: 1.2rem;
     justify-content: center;
@@ -1065,14 +1065,15 @@ footer {
     display: none;
   }
   .logosm {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    width: 6rem;
-    cursor: pointer;
-    &:hover {
-      filter: drop-shadow(0 0 0.75rem $blue);
-    }
+    display: none;
+    // margin: 0;
+    // padding: 0;
+    // display: inline-block;
+    // width: 6rem;
+    // cursor: pointer;
+    // &:hover {
+    //   filter: drop-shadow(0 0 0.75rem $blue);
+    // }
   }
 
   .navi {
@@ -1090,7 +1091,7 @@ footer {
       align-items: center;
       width: 100vw;
       li {
-        margin: 0 0.8rem;
+        margin: 0 0.5rem;
       }
     }
   }
@@ -1106,6 +1107,7 @@ footer {
       align-items: center;
       .hero__content {
         margin-left: 0;
+        row-gap: 0;
       }
     }
     h1 {
@@ -1140,6 +1142,9 @@ footer {
       display: flex;
       flex-direction: column;
       row-gap: 5rem;
+      h2 {
+        font-size: clamp(1rem, 2vw + 1rem, 6rem);
+      }
       .break {
         display: flex;
         flex-direction: column;
@@ -1153,6 +1158,12 @@ footer {
         }
       }
     }
+  }
+
+  .last {
+    padding-right: 5rem;
+    border-right: 0;
+    width: 23rem;
   }
 
   // -- skills --
@@ -1173,14 +1184,16 @@ footer {
     }
   }
 
-  // --form --
+  // -- contact --
   .form__section {
     height: auto;
-
     .form__container {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      .contact__left {
+        justify-content: space-evenly;
+      }
       .contact__left--image {
         max-width: 18rem;
       }
@@ -1194,8 +1207,17 @@ footer {
           margin-top: 1.2rem;
           font-size: 1rem;
           text-indent: 0;
+          width: 13.5rem;
         }
       }
+    }
+  }
+
+  // -- footer --
+  footer {
+    place-content: center;
+    .footer__container {
+      column-gap: 6rem;
     }
   }
 }
