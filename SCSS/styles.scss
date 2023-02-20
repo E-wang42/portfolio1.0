@@ -1106,8 +1106,8 @@ footer {
       flex-direction: column;
       align-items: center;
       .hero__content {
-        margin-left: 0;
         row-gap: 0;
+        margin: 6rem 0 0 0;
       }
     }
     h1 {
@@ -1136,7 +1136,8 @@ footer {
   // -- Break --
   .break__section {
     width: 100%;
-    height: 160vh;
+    height: 170dvh;
+    transform: translateY(-10rem);
     .break__container {
       position: absolute;
       display: flex;
@@ -1144,6 +1145,7 @@ footer {
       row-gap: 5rem;
       h2 {
         font-size: clamp(1rem, 2vw + 1rem, 6rem);
+        transform: translateY(-4rem);
       }
       .break {
         display: flex;
@@ -1172,6 +1174,19 @@ footer {
     &__container {
       display: flex;
       flex-direction: column;
+      margin: 4rem auto;
+      .skills__dev {
+        &--icons {
+          gap: 3rem;
+        }
+      }
+      .skills__design {
+        margin-top: 5rem;
+      }
+      .skills__tools {
+        margin: 4rem auto;
+        transform: translateX(-1rem);
+      }
     }
   }
 
@@ -1187,12 +1202,16 @@ footer {
   // -- contact --
   .form__section {
     height: auto;
+    padding-block: 0;
+    padding-bottom: 8rem;
     .form__container {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      // margin-top: 0;
       .contact__left {
         justify-content: space-evenly;
+        padding: 0;
       }
       .contact__left--image {
         max-width: 18rem;
