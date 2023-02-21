@@ -267,6 +267,8 @@ nav ul li .slideIn {
 }
 .hero__content--buttons .email__container .old {
   width: 100%;
+  display: flex;
+  justify-content: start;
 }
 .hero__content--buttons .email__container:hover .new {
   transform: translateX(0);
@@ -944,6 +946,18 @@ footer {
   align-items: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .work {
+    width: 18.4rem;
+  }
+  .vl {
+    margin-right: 6rem;
+  }
+  .p1 {
+    white-space: nowrap;
+    transform: translateX(-4rem);
+  }
+}
 @media screen and (max-width: 768px) {
   .logo {
     display: none;
@@ -985,9 +999,11 @@ footer {
   }
   .hero h1 {
     font-size: 1.3rem;
+    margin-bottom: 0.5rem;
   }
   .hero h3 {
     font-size: 1.1rem;
+    margin-bottom: 0.5rem;
   }
   .hero p {
     font-size: medium;
