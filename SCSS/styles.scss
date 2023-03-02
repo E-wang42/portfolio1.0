@@ -1116,7 +1116,8 @@ footer {
   .hero {
     display: grid;
     place-items: center;
-    height: 110svh;
+    min-height: 120%;
+    width: 100vw;
     &__container {
       position: absolute;
       display: flex;
