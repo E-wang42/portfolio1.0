@@ -858,8 +858,7 @@ nav {
   background: url("/images/svg_bg-bottom.svg") center / cover;
   background-repeat: none;
   background-blend-mode: multiply;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
   padding-block: 8rem;
