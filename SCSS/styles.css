@@ -94,8 +94,7 @@ html {
 }
 
 main {
-  height: 100vh;
-  max-width: 100vw;
+  height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
   perspective: 5rem;
@@ -423,7 +422,7 @@ nav ul li .slideIn {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100dvh;
   transform-style: preserve-3d;
   z-index: -1;
 }
@@ -537,8 +536,7 @@ nav ul li .slideIn {
 }
 
 .projects {
-  width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: url("/images/svg_bg-top.svg") center/cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -732,7 +730,7 @@ nav ul li .slideIn {
   background: url("/images/svg_bg-bottom.svg") center/cover;
   background-repeat: none;
   background-blend-mode: multiply;
-  min-height: 100dvh;
+  height: auto;
   display: grid;
   place-items: center;
   padding-block: 8rem;
